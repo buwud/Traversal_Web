@@ -13,7 +13,7 @@ namespace EntityLayer.Concrete
 		public string? post1Description  { get; set; }
 		public string? post1Image  { get; set; }
 		public bool? post1Status  { get; set; }
-		//durumu true oılan 4 satır olcak
+		//durumu true olan 4 satır olcak
 
 
 		public int Feature2ID { get; set; }
