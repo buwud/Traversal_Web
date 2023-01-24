@@ -39,5 +39,6 @@ namespace BusinessLayer.Concrete
 		public void TUpdate(About t)
 		{
 			_aboutDal.Update(t);
+		}
 	}
 }
