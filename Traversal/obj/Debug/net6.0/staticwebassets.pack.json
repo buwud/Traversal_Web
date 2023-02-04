@@ -5,6 +5,234 @@
       "PackagePath": "staticwebassets\\Traversal.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\about.html",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\about.html"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\css\\style-liberty.css",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\css\\style-liberty.css"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\banner1.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\banner1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\banner2.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\banner2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\banner3.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\banner3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\banner4.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\banner4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\c1.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\c1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\c2.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\c2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\c3.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\c3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\c4.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\c4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\close.png",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\date.png",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\date.png"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\dots.png",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\dots.png"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\down.png",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\down.png"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g1.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g10.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g2.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g3.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g4.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g5.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g6.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g7.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g8.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\g9.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\g9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\img-sprite.png",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\img-sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\team1.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\team1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\team2.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\team2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\team3.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\team3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\images\\team4.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\images\\team4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\all.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\all.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\app.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\jquery.countup.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\jquery.countup.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\jquery.waypoints.min.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\jquery.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\jquery.zoomslider.min.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\jquery.zoomslider.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\lightbox-plus-jquery.min.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\lightbox-plus-jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\modernizr-2.6.2.min.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\modernizr-2.6.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\assets\\js\\theme-change.js",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\assets\\js\\theme-change.js"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\blog-single.html",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\blog-single.html"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\blog.html",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\blog.html"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\contact.html",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\contact.html"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\index.html",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\landing-single.html",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\landing-single.html"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\liberty-license-W3Layouts.txt",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\liberty-license-W3Layouts.txt"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\pricing.html",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\pricing.html"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\services.html",
+      "PackagePath": "staticwebassets\\Traversal-Liberty\\services.html"
+    },
+    {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\about.html",
       "PackagePath": "staticwebassets\\Traversal-Starter\\about.html"
     },
