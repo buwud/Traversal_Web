@@ -37,6 +37,18 @@
       "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\fonts\\fontawesome-webfont.woff2"
     },
     {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\Be a Cat.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\Be a Cat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\Paris.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\Paris.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\amsterdam.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\amsterdam.jpg"
+    },
+    {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\banner1.jpg",
       "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\banner1.jpg"
     },
@@ -85,6 +97,10 @@
       "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\down.png"
     },
     {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\dubai.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\dubai.jpg"
+    },
+    {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\g1.jpg",
       "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\g1.jpg"
     },
@@ -125,8 +141,28 @@
       "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\g9.jpg"
     },
     {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\germany.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\germany.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\gumus.png",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\gumus.png"
+    },
+    {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\img-sprite.png",
       "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\img-sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\istanbul.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\istanbul.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\milano.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\milano.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\seoul.jpeg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\seoul.jpeg"
     },
     {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\team1.jpg",
@@ -143,6 +179,10 @@
     {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\team4.jpg",
       "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\team4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\images\\อรัยส์อรัยส์ \uD83E\uDD7A on Twitter.jpg",
+      "PackagePath": "staticwebassets\\Traversal-Starter\\assets\\images\\อรัยส์อรัยส์ \uD83E\uDD7A on Twitter.jpg"
     },
     {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Starter\\assets\\js\\all.js",

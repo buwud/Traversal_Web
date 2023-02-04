@@ -8,29 +8,56 @@
             <h3 class="hny-title">Popular Destinations</h3>
         </div>
         <div class="row bottom-ab-grids">
-            @foreach(var item in Model)
-            {
-            <div class="col-lg-6 subject-card mt-lg-0 mt-4">
-                <div class="subject-card-header p-4">
-                    <a href="#" class="card_title p-lg-4d-block">
-                        <div class="row align-items-center">
-                            <div class="col-sm-5 subject-img">
-                                <img src="@item.Image" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
-                                <h4>@item.City</h4>
-                                <p>@item.StayTime</p>
-                                <div class="dst-btm">
-                                    <h6 class=""> Start From </h6>
-                                    <span>$@item.Price</span>
+        @for(var i=0;i<Model.Count();i++)
+        {
+                <br />
+                <div class="col-lg-6 subject-card mt-lg-0 mt-4">
+                    <div class="subject-card-header p-4">
+                        <a href="#" class="card_title p-lg-4d-block">
+                            <div class="row align-items-center">
+                                <div class="col-sm-5 subject-img">
+                                    <img src="@Model[i].Image" class="img-fluid" alt="">
                                 </div>
-                                <p class="sub-para">@item.Description</p>
+                                <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                    <h4>@Model[i].City</h4>
+                                    <p>@Model[i].StayTime</p>
+                                    <div class="dst-btm">
+                                        <h6 class=""> Start From </h6>
+                                        <span>$@Model[i].Price</span>
+                                    </div>
+                                    <p class="sub-para">@Model[i].Description</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            }
+                
+                i = i + 1;
+                @if(i<Model.Count())
+                {
+                <div class="col-lg-6 subject-card mt-lg-0 mt-4">
+                    <div class="subject-card-header p-4">
+                        <a href="#" class="card_title p-lg-4d-block">
+                            <div class="row align-items-center">
+                                <div class="col-sm-5 subject-img">
+                                        <img src="@Model[i].Image" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                    <h4>@Model[i].City</h4>
+                                    <p>@Model[i].StayTime</p>
+                                    <div class="dst-btm">
+                                        <h6 class=""> Start From </h6>
+                                        <span>$@Model[i].Price</span>
+                                    </div>
+                                        <p class="sub-para">@Model[i].Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                }
+                <br />
+        }
         </div>
     </div>
 </section>
