@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Traversal.Controllers
@@ -11,7 +12,18 @@ namespace Traversal.Controllers
         {
             var values = _destinationManager.GetList();
             return View(values);
-            //fbfghfgh
         }
+        [HttpGet]
+        public IActionResult DestinationDetails(int id)
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult DestinationDetails(Destination d)
+        {
+
+            return View();
+        }
+
     }
 }
