@@ -22,8 +22,14 @@ namespace DataAccessLayer.Repository
 			using var c = new Context();
 			return c.Set<T>().ToList();
 		}
+        public T GetValue(int id)
+        {
+            using var c = new Context();
+			return c.Set<T>().Find(id);
 
-		public void Insert(T t)
+        }
+
+        public void Insert(T t)
 		{
 			using var c=new Context();
 			c.Add(t);
@@ -36,5 +42,6 @@ namespace DataAccessLayer.Repository
 			c.Update(t);
 			//c.SaveChanges();
 		}
+		
 	}
 }

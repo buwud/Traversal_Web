@@ -13,10 +13,12 @@ namespace Traversal.Controllers
             var values = _destinationManager.GetList();
             return View(values);
         }
+        //Verileri id ye göre buldurup taşıma işlemi gerçekleştiricez
         [HttpGet]
         public IActionResult DestinationDetails(int id)
         {
-            return View();
+            var value = _destinationManager.TGetByID(id);
+            return View(value);
         }
         [HttpPost]
         public IActionResult DestinationDetails(Destination d)
