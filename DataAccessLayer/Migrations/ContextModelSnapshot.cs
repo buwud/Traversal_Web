@@ -78,6 +78,36 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("AboutCares");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.Comment", b =>
+                {
+                    b.Property<int>("CommentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"));
+
+                    b.Property<string>("CommentContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CommentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("CommentState")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("CommentUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DestinationID")
+                        .HasColumnType("int");
+
+                    b.HasKey("CommentID");
+
+                    b.HasIndex("DestinationID");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Contact", b =>
                 {
                     b.Property<int>("ContactID")
@@ -132,6 +162,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("DestinationID1")
+                        .HasColumnType("int");
+
                     b.Property<string>("Details")
                         .HasColumnType("nvarchar(max)");
 
@@ -154,6 +187,8 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DestinationID");
+
+                    b.HasIndex("DestinationID1");
 
                     b.ToTable("Destinations");
                 });
@@ -269,6 +304,29 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("TestimonialID");
 
                     b.ToTable("Testimonials");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Comment", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Destination", "Destination")
+                        .WithMany()
+                        .HasForeignKey("DestinationID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Destination");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Destination", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Destination", null)
+                        .WithMany("Destinations")
+                        .HasForeignKey("DestinationID1");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Destination", b =>
+                {
+                    b.Navigation("Destinations");
                 });
 #pragma warning restore 612, 618
         }

@@ -26,7 +26,6 @@ namespace DataAccessLayer.Repository
         {
             using var c = new Context();
 			return c.Set<T>().Find(id);
-
         }
 
         public void Insert(T t)
