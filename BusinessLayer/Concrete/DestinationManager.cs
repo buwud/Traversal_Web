@@ -22,7 +22,6 @@ namespace BusinessLayer.Concrete
         {
             return _DestinationDal.GetList();
         }
-
         public void TDelete(Destination t)
         {
             _DestinationDal.Delete(t);
