@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Traversal.Controllers
 {
+    [AllowAnonymous]
     public class DestinationController : Controller
     {
         DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal()); 

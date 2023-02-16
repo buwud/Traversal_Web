@@ -29,7 +29,10 @@ namespace Traversal.Controllers
                  Name= m.Name,
                  SurName=m.Surname,
                  Email=m.Email,
-                 PhoneNumber=m.Phone
+                 PhoneNumber=m.Phone,
+                 Gender=m.Gender,
+                 Age=m.Age,
+                 UserName=m.Username
             };
 
             if (m.Password == m.ConfirmPassword)

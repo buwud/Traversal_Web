@@ -1,5 +1,6 @@
 using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 
@@ -18,7 +19,12 @@ builder.Services.AddMvc(Config =>
 });
 builder.Services.AddMvc();
 
-
+builder.Services.AddAuthentication(
+    CookieAuthenticationDefaults.AuthenticationScheme
+    ).AddCookie(x =>
+    {
+        x.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+    });
 
 var app = builder.Build();
 
@@ -31,6 +37,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseAuthentication();

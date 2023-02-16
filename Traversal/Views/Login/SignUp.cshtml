@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Traversal.Models.UserRegisterViewModel
+
+@{
     Layout = null;
 }
 
@@ -26,37 +28,73 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form method="post" class="register-form" id="register-form">
+                        <form method="post" class="register-form">
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="Name" id="name" placeholder="Your Name" />
-                            </div>
-                             <div class="form-group">
-                              <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="Surname" id="Surname" placeholder="Surname" />
+                                <label for="Name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" placeholder="Your Name" asp-for="Name" />
+                                <span asp-validation-for="Name" class="text-danger" style="color:crimson"></span>
                             </div>
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="Email" id="email" placeholder="Your Email" />
+                                <label for="Surname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" id="Surname" placeholder="Your Surname" asp-for="Surname" />
+                                <span asp-validation-for="Surname" class="text-danger" style="color:crimson"></span>
                             </div>
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-phone"></i></label>
-                                <input type="tel" name="Phone" id="phone" placeholder="Phone Number" />
+                                <label for="Email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" placeholder="Your Email" asp-for="Email" />
+                                <span asp-validation-for="Email" class="text-danger" style="color:crimson"></span>
+                            </div>
+                          
+                            <div class="form-group">
+                                <label for="Phone Number"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="tel" placeholder="Phone Number" asp-for="Phone" />
+                                <span asp-validation-for="Phone" class="text-danger" style="color:crimson"></span>
+                            </div>
+                        <div class="form-group">
+                             <label for="Gender"><i class="zmdi zmdi-male-female"></i></label>
+                                 <div style="left:25px;position: relative; display: inline-block;">
+                                 <select class="form-control dropdown-menu" style="width: 160px;"                 name="g" id="Gender" asp-for="Gender">
+                                 <option value="" disabled selected hidden>Select Gender</option>
+                                 <option value="Female">Female</option>
+                                 <option value="Male">Male</option>
+                                 <option value="Others">Others</option>
+                                 </select>
+                                    <div style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;">
+                                    <i class="zmdi zmdi-caret-down" style="font-size: 20px;"></i>
+                                    </div>
+                                 </div>
+                                 
+                        </div>
+                   
+                            <span asp-validation-for="Gender" class="text-danger" style="color:crimson"></span>
+
+                            <div class="form-group">
+                                <label for="Age"><i class="zmdi zmdi-cake"></i></label>
+                                <input type="number" placeholder="Age" asp-for="Age" />
+                                <span asp-validation-for="Age" class="text-danger" style="color:crimson"></span>
                             </div>
                             <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password" />
+                                <label for="Username"><i class="zmdi zmdi-account-box"></i></label>
+                                <input type="text" placeholder="Username" asp-for="Username" />
+                                <span asp-validation-for="Username" class="text-danger" style="color:crimson"></span>
                             </div>
                             <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="ConfirmPassword" id="re_pass" placeholder="Repeat your password" />
+                                <label for="Password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" asp-for="Password" placeholder="Password" />
+                                <span asp-validation-for="Password" class="text-danger" style="color:crimson"></span>
                             </div>
+                            <div class="form-group">
+                                <label for="ConfirmPassword"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" asp-for="ConfirmPassword" placeholder="Repeat your password" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger" style="color:crimson"></span>
+                            </div>
+                            <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                             </div>
                             <div class="form-group form-button">
-                                <input style="background-color:crimson" type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                                <input style="background-color:crimson" type="submit" class="form-submit" />
                             </div>
                         </form>
                     </div>
@@ -67,7 +105,6 @@
                 </div>
             </div>
         </section>
-
     </div>
     <!-- JS -->
     <script src="~/colorlib-regform-7/vendor/jquery/jquery.min.js"></script>

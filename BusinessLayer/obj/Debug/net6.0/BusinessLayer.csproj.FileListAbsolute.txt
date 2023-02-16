@@ -1,4 +1,5 @@
 C:\Users\yeolb\Desktop\Traversal\BusinessLayer\bin\Debug\net6.0\BusinessLayer.deps.json
+C:\Users\yeolb\Desktop\Traversal\BusinessLayer\bin\Debug\net6.0\BusinessLayer.runtimeconfig.json
 C:\Users\yeolb\Desktop\Traversal\BusinessLayer\bin\Debug\net6.0\BusinessLayer.dll
 C:\Users\yeolb\Desktop\Traversal\BusinessLayer\bin\Debug\net6.0\BusinessLayer.pdb
 C:\Users\yeolb\Desktop\Traversal\BusinessLayer\bin\Debug\net6.0\DataAccessLayer.dll
@@ -14,4 +15,5 @@ C:\Users\yeolb\Desktop\Traversal\BusinessLayer\obj\Debug\net6.0\BusinessLayer.cs
 C:\Users\yeolb\Desktop\Traversal\BusinessLayer\obj\Debug\net6.0\BusinessLayer.dll
 C:\Users\yeolb\Desktop\Traversal\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
 C:\Users\yeolb\Desktop\Traversal\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
+C:\Users\yeolb\Desktop\Traversal\BusinessLayer\obj\Debug\net6.0\BusinessLayer.genruntimeconfig.cache
 C:\Users\yeolb\Desktop\Traversal\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll
