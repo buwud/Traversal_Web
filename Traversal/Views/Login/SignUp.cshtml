@@ -30,13 +30,13 @@
 
                             <div class="form-group">
                                 <label for="Name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" placeholder="Your Name" asp-for="Name" />
+                                <input type="text" pattern="[^\d]*" placeholder="Your Name" asp-for="Name" />
                                 <span asp-validation-for="Name" class="text-danger" style="color:crimson"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="Surname"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" id="Surname" placeholder="Your Surname" asp-for="Surname" />
+                                <input type="text" pattern="[^\d]*" id="Surname" placeholder="Your Surname" asp-for="Surname" />
                                 <span asp-validation-for="Surname" class="text-danger" style="color:crimson"></span>
                             </div>
 
@@ -65,7 +65,7 @@
 
                             <div class="form-group">
                                 <label for="Age"><i class="zmdi zmdi-cake"></i></label>
-                                <input type="number" placeholder="Age" asp-for="Age" />
+                                <input type="number" min="18" max="100" placeholder="Age" asp-for="Age" />
                                 <span asp-validation-for="Age" class="text-danger" style="color:crimson"></span>
                             </div>
 
