@@ -4,8 +4,6 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,16 +27,19 @@
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
                         <form method="post" class="register-form">
+
                             <div class="form-group">
                                 <label for="Name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" placeholder="Your Name" asp-for="Name" />
                                 <span asp-validation-for="Name" class="text-danger" style="color:crimson"></span>
                             </div>
+
                             <div class="form-group">
                                 <label for="Surname"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" id="Surname" placeholder="Your Surname" asp-for="Surname" />
                                 <span asp-validation-for="Surname" class="text-danger" style="color:crimson"></span>
                             </div>
+
                             <div class="form-group">
                                 <label for="Email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" placeholder="Your Email" asp-for="Email" />
@@ -47,25 +48,19 @@
                           
                             <div class="form-group">
                                 <label for="Phone Number"><i class="zmdi zmdi-phone"></i></label>
-                                <input type="tel" placeholder="Phone Number" asp-for="Phone" />
+                                <input type="tel" placeholder="Phone Number (05**5**5*5*)" asp-for="Phone" />
                                 <span asp-validation-for="Phone" class="text-danger" style="color:crimson"></span>
                             </div>
                         <div class="form-group">
                              <label for="Gender"><i class="zmdi zmdi-male-female"></i></label>
                                  <div style="left:25px;position: relative; display: inline-block;">
-                                 <select class="form-control dropdown-menu" style="width: 160px;"                 name="g" id="Gender" asp-for="Gender">
-                                 <option value="" disabled selected hidden>Select Gender</option>
-                                 <option value="Female">Female</option>
-                                 <option value="Male">Male</option>
-                                 <option value="Others">Others</option>
-                                 </select>
+                                    @Html.DropDownListFor(x=>x.Gender,(List<SelectListItem>)Model.GenderOptions, new { style = "width: 120px;" })
+                                    
                                     <div style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;">
-                                    <i class="zmdi zmdi-caret-down" style="font-size: 20px;"></i>
+                                    <i class="zmdi zmdi-caret-down" style="font-size: 25px;"></i>
                                     </div>
-                                 </div>
-                                 
+                                 </div>     
                         </div>
-                   
                             <span asp-validation-for="Gender" class="text-danger" style="color:crimson"></span>
 
                             <div class="form-group">
@@ -73,24 +68,29 @@
                                 <input type="number" placeholder="Age" asp-for="Age" />
                                 <span asp-validation-for="Age" class="text-danger" style="color:crimson"></span>
                             </div>
+
                             <div class="form-group">
                                 <label for="Username"><i class="zmdi zmdi-account-box"></i></label>
                                 <input type="text" placeholder="Username" asp-for="Username" />
                                 <span asp-validation-for="Username" class="text-danger" style="color:crimson"></span>
                             </div>
+
                             <div class="form-group">
                                 <label for="Password"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" asp-for="Password" placeholder="Password" />
                                 <span asp-validation-for="Password" class="text-danger" style="color:crimson"></span>
                             </div>
+
                             <div class="form-group">
                                 <label for="ConfirmPassword"><i class="zmdi zmdi-lock-outline"></i></label>
                                 <input type="password" asp-for="ConfirmPassword" placeholder="Repeat your password" />
                                 <span asp-validation-for="ConfirmPassword" class="text-danger" style="color:crimson"></span>
                             </div>
+
                             <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                             </div>
                             <div class="form-group form-button">
@@ -110,4 +110,3 @@
     <script src="~/colorlib-regform-7/vendor/jquery/jquery.min.js"></script>
     <script src="~/colorlib-regform-7/js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
-</html>
