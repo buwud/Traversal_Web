@@ -23,6 +23,7 @@
     <None Include="wwwroot\colorlib-regform-7\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\variables.scssc" />
     <None Include="wwwroot\colorlib-regform-7\.sass-cache\9dc767a56f3dc2f8a933300255cd2265f13191d4\main.scssc" />
     <None Include="wwwroot\colorlib-regform-7\.sass-cache\9dc767a56f3dc2f8a933300255cd2265f13191d4\responsive.scssc" />
+    <None Include="wwwroot\soft-ui-dashboard-main\.github\workflows\main.yml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,12 +38,21 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.12" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Member\Controllers\" />
+    <Folder Include="Areas\Member\Data\" />
+    <Folder Include="Areas\Member\Models\" />
+    <Folder Include="Areas\Member\Views\" />
   </ItemGroup>
 
 </Project>
