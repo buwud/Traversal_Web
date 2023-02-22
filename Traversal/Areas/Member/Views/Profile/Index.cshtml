@@ -5,64 +5,85 @@
 }
 
 <h6>Profile Edit Page</h6>
-<form method="post" class="register-form">
+<form method="post">
 
-    <div class="form-group">
-        <label for="Name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-        <input type="text" pattern="[^\d]*" placeholder="Your Name" asp-for="Name" />
+    <div>
+        @Html.Label("Name")
+        <input type="text" pattern="[^\d]*" placeholder="Your Name" asp-for="Name" class="form-control"  />
         <span asp-validation-for="Name" class="text-danger" style="color:crimson"></span>
     </div>
 
-    <div class="form-group">
-        <label for="Surname"><i class="zmdi zmdi-account material-icons-name"></i></label>
-        <input type="text" pattern="[^\d]*" id="Surname" placeholder="Your Surname" asp-for="Surname" />
+    <div>
+        @Html.Label("Surname")
+        <input type="text" pattern="[^\d]*" id="Surname" placeholder="Your Surname" asp-for="Surname" class="form-control"  />
         <span asp-validation-for="Surname" class="text-danger" style="color:crimson"></span>
     </div>
 
-    <div class="form-group">
-        <label for="Email"><i class="zmdi zmdi-email"></i></label>
-        <input type="email" placeholder="Your Email" asp-for="Email" />
+    <div>
+        @Html.Label("Email")
+        <input type="email" placeholder="Your Email" asp-for="Email" class="form-control" />
         <span asp-validation-for="Email" class="text-danger" style="color:crimson"></span>
     </div>
 
-    <div class="form-group">
-        <label for="Phone Number"><i class="zmdi zmdi-phone"></i></label>
-        <input type="tel" placeholder="Phone Number (05**5**5*5*)" asp-for="Phone" />
+    <div>
+        @Html.Label("Phone Number")
+        <input type="tel" placeholder="Phone Number (05**5**5*5*)" asp-for="Phone" class="form-control"  />
         <span asp-validation-for="Phone" class="text-danger" style="color:crimson"></span>
     </div>
-    <div class="form-group">
-        <label for="Gender"><i class="zmdi zmdi-male-female"></i></label>
-        <div style="left:25px;position: relative; display: inline-block;">
-            @Html.DropDownListFor(x=>x.Gender,(List<SelectListItem>)Model.GenderOptions, new { style = "width: 120px;" })
+    <div>
+  @Html.Label("Gender")
+  @Html.DropDownListFor(x => x.Gender, (List<SelectListItem>)Model.GenderOptions, new { @class = "custom-select" })
 
-            <div style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;">
-                <i class="zmdi zmdi-caret-down" style="font-size: 25px;"></i>
-            </div>
-        </div>
-    </div>
+  <div style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;">
+    <i class="zmdi zmdi-caret-down" style="font-size: 25px;"></i>
+  </div>
+</div>
+    @Html .custom-select {
+    width: 120px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    }
+
+    .custom-select:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+
+    .custom-select::-ms-expand {
+    border: 0;
+    background-color: transparent;
+    }
+
     <span asp-validation-for="Gender" class="text-danger" style="color:crimson"></span>
 
-    <div class="form-group">
-        <label for="Age"><i class="zmdi zmdi-cake"></i></label>
-        <input type="number" min="18" max="100" placeholder="Age" asp-for="Age" />
+    <div>
+        @Html.Label("Age")
+        <input type="number" min="18" max="100" placeholder="Age" asp-for="Age" class="form-control" />
         <span asp-validation-for="Age" class="text-danger" style="color:crimson"></span>
     </div>
 
-    <div class="form-group">
-        <label for="Username"><i class="zmdi zmdi-account-box"></i></label>
-        <input type="text" placeholder="Username" asp-for="Username" />
-        <span asp-validation-for="Username" class="text-danger" style="color:crimson"></span>
-    </div>
-
-    <div class="form-group">
-        <label for="Password"><i class="zmdi zmdi-lock"></i></label>
-        <input type="password" maxlength="42" asp-for="Password" placeholder="Password" />
+    <div>
+        @Html.Label("Password")
+        <input type="password" maxlength="42" asp-for="Password" placeholder="Password" class="form-control" />
         <span asp-validation-for="Password" class="text-danger" style="color:crimson"></span>
     </div>
 
-    <div class="form-group">
-        <label for="ConfirmPassword"><i class="zmdi zmdi-lock-outline"></i></label>
-        <input type="password" maxlength="42" asp-for="ConfirmPassword" placeholder="Repeat your password" />
+    <div>
+        @Html.Label("Confirm Password")
+        <input type="password" maxlength="42" asp-for="ConfirmPassword" placeholder="Repeat your password" class="form-control"  />
         <span asp-validation-for="ConfirmPassword" class="text-danger" style="color:crimson"></span>
     </div>
 
