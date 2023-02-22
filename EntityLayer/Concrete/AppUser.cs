@@ -13,5 +13,6 @@ namespace EntityLayer.Concrete
         public string? SurName { get; set; }
         public byte Age { get; set; }
         public string? Gender { get; set; }
+        public string? ImageURL { get; set; }
     }
 }
