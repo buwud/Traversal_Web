@@ -77,13 +77,13 @@
 
                             <div class="form-group">
                                 <label for="Password"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" asp-for="Password" placeholder="Password" />
+                                <input type="password" maxlength="42" asp-for="Password" placeholder="Password" />
                                 <span asp-validation-for="Password" class="text-danger" style="color:crimson"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="ConfirmPassword"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" asp-for="ConfirmPassword" placeholder="Repeat your password" />
+                                <input type="password" maxlength="42" asp-for="ConfirmPassword" placeholder="Repeat your password" />
                                 <span asp-validation-for="ConfirmPassword" class="text-danger" style="color:crimson"></span>
                             </div>
 
