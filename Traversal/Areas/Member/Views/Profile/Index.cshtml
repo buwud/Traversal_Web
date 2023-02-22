@@ -31,43 +31,16 @@
         <span asp-validation-for="Phone" class="text-danger" style="color:crimson"></span>
     </div>
     <div>
-  @Html.Label("Gender")
-  @Html.DropDownListFor(x => x.Gender, (List<SelectListItem>)Model.GenderOptions, new { @class = "custom-select" })
+        @Html.Label("Gender")
+        <br />
+        @Html.DropDownListFor(x => x.Gender, (List<SelectListItem>)Model.GenderOptions, new { @class = "form-control", style = "font-family: Arial, sans-serif;" })
+        <div style="form-control;position: absolute; top: 50%; transform: translateY(-50%); right: 10px;">
+            <i class="zmdi zmdi-caret-down" style="font-size: 25px;"></i>
+        </div>
+        <span  asp-validation-for="Gender" class="text-danger" style="color:crimson"></span>
+    </div>
 
-  <div style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;">
-    <i class="zmdi zmdi-caret-down" style="font-size: 25px;"></i>
-  </div>
-</div>
-    @Html .custom-select {
-    width: 120px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.428571429;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    }
-
-    .custom-select:focus {
-    border-color: #66afe9;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-    }
-
-    .custom-select::-ms-expand {
-    border: 0;
-    background-color: transparent;
-    }
-
-    <span asp-validation-for="Gender" class="text-danger" style="color:crimson"></span>
+   
 
     <div>
         @Html.Label("Age")
