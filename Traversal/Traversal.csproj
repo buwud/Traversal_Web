@@ -49,6 +49,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Member\Data\" />
+    <Folder Include="wwwroot\MemberImages\" />
   </ItemGroup>
 
 </Project>

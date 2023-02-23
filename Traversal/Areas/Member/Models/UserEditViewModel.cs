@@ -35,6 +35,10 @@ namespace Traversal.Areas.Member.Models
         [Range(18, 150, ErrorMessage = "Enter your age correctly")]
         public byte Age { get; set; }
 
+        public string? ImageURL { get; set; }
+
+        public IFormFile? Image { get; set; }
+
         [Required(ErrorMessage = "Enter your password")]
         public string? Password { get; set; }
 
