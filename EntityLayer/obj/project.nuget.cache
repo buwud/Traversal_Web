@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sIehxguzsU7w3IJpxSUDdbrqK0ko9NQbmC5nuelWXRx5yivn4ApHXdC9fESTnHEZ2BmCGuHNOX8wiGVCJp5R4g==",
+  "dgSpecHash": "TLA9nh4D1DTBW6kiwRu5at4i2bOKBIyruFxpxRjUua5PZcon6mkjiggXq6FE77CkHFbjnaM2kGeCMBF52Z5Itg==",
   "success": true,
   "projectFilePath": "C:\\Users\\yeolb\\Desktop\\Traversal\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.aspnetcore.identity\\2.2.0\\microsoft.aspnetcore.identity.2.2.0.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.14\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.14.nupkg.sha512",
+    "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.aspnetcore.websockets\\2.2.1\\microsoft.aspnetcore.websockets.2.2.1.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -77,6 +78,7 @@
     "C:\\Users\\yeolb\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\yeolb\\.nuget\\packages\\system.net.websockets.websocketprotocol\\4.5.3\\system.net.websockets.websocketprotocol.4.5.3.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",

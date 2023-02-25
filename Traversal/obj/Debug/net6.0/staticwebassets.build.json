@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WlqLSPUyvAg/BCA+OFtutKu0AKDXtn6U4xUCmh/NOuA=",
+  "Hash": "xQ9PeyuGKG2VE8bh00iQfXoju+Fa9OiGqj/dO2Y6Bog=",
   "Source": "Traversal",
   "BasePath": "_content/Traversal",
   "Mode": "Default",
@@ -2837,6 +2837,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\MemberImagesb3671239-62a7-4b97-8d23-bcb7551048e7.png",
+      "SourceId": "Traversal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\",
+      "BasePath": "_content/Traversal",
+      "RelativePath": "MemberImagesb3671239-62a7-4b97-8d23-bcb7551048e7.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MemberImagesb3671239-62a7-4b97-8d23-bcb7551048e7.png"
     },
     {
       "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\soft-ui-dashboard-main\\assets\\css\\nucleo-icons.css",
