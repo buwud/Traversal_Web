@@ -14,5 +14,6 @@ namespace EntityLayer.Concrete
         public byte Age { get; set; }
         public string? Gender { get; set; }
         public string? ImageURL { get; set; }
+        public List<Reservation> reservations { get; set; }
     }
 }

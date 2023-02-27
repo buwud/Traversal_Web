@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xQ9PeyuGKG2VE8bh00iQfXoju+Fa9OiGqj/dO2Y6Bog=",
+  "Hash": "e0yRJP/hUyyCmLD/UAh7pYXHlvUyQ3A6TVDSxR+BX0w=",
   "Source": "Traversal",
   "BasePath": "_content/Traversal",
   "Mode": "Default",
@@ -2837,6 +2837,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\MemberImages8bd36efb-5647-4fd2-a6af-5d60218c1834.png",
+      "SourceId": "Traversal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\",
+      "BasePath": "_content/Traversal",
+      "RelativePath": "MemberImages8bd36efb-5647-4fd2-a6af-5d60218c1834.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MemberImages8bd36efb-5647-4fd2-a6af-5d60218c1834.png"
     },
     {
       "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\MemberImagesb3671239-62a7-4b97-8d23-bcb7551048e7.png",
