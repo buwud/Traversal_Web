@@ -31,15 +31,21 @@ namespace Traversal.Areas.Member.Controllers
         [HttpGet]
         public IActionResult NewReservation()
         {
-            List<SelectListItem> values = (from x in _destinationManager.GetList()
-                                           select new SelectListItem
-                                           {
-                                               Text = x.City,//destination tarafında city ismi kullanılacak
-                                               Value = x.DestinationID.ToString()
-                                           }).ToList();
+            List<SelectListItem> values = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "", Text = "-- Select Destination --", Selected = true }
+            };
+            values.AddRange(from x in _destinationManager.GetList()
+                            select new SelectListItem
+                            {
+                                Text = x.City,
+                                Value = x.DestinationID.ToString()
+                            });
+
             ViewBag.values = values;
             return View();
         }
+
 
         [HttpPost]
         public IActionResult NewReservation(Reservation r)
@@ -54,23 +60,27 @@ namespace Traversal.Areas.Member.Controllers
                     _reservationManager.TInsert(r);
                     return RedirectToAction("CurrReservation");
                 }
-                else
+            }
+            else
+            {
+                foreach (var items in result.Errors)
                 {
-                    foreach(var items in result.Errors)
-                    {
-                        ModelState.AddModelError(items.PropertyName, items.ErrorMessage);
-                    }
+                    ModelState.AddModelError("", items.ErrorMessage);
                 }
             }
-            List<SelectListItem> values = (from x in _destinationManager.GetList()
-                                           select new SelectListItem
-                                           {
-                                               Text = x.City,//destination tarafında city ismi kullanılacak
-                                               Value = x.DestinationID.ToString()
-                                           }).ToList();
+            List<SelectListItem> values = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "", Text = "-- Select Destination --", Selected = true }
+            };
+            values.AddRange(from x in _destinationManager.GetList()
+                            select new SelectListItem
+                            {
+                                Text = x.City,
+                                Value = x.DestinationID.ToString()
+                            });
+
             ViewBag.values = values;
             return View();
-            
         }
     }
 }

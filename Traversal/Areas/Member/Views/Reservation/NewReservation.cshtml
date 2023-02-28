@@ -5,13 +5,13 @@
 }
 
 <h6>New Reservation Page</h6>
-<form method="post" enctype="multipart/form-data">
+<form method="post">
     <br />
     <div>
         @Html.Label("City")
         <br />
         @Html.DropDownListFor(x => x.Destination, (List<SelectListItem>)ViewBag.values, new { @class = "form-control", style = "font-family: Arial, sans-serif;" })
-        <div style="form-control;position: absolute; top: 50%; transform: translateY(-50%); right: 10px;">
+        <div style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px">
             <i class="zmdi zmdi-caret-down" style="font-size: 25px;"></i>
         </div>
         <span asp-validation-for="Destination" class="text-danger" style="color:crimson"></span>
@@ -37,10 +37,7 @@
     <br />
 
     <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
-
-    <button class="btn btn-primary" style="background-color:crimson">Make Reservation</button>
     <br />
-
-    <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
+    <button class="btn btn-primary" style="background-color:crimson">Make Reservation</button>
     <br />
 </form>
