@@ -46,7 +46,7 @@
           }
         }
       },
-      "FluentValidation/11.5.0": {
+      "FluentValidation/11.5.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/FluentValidation.dll": {
@@ -1693,6 +1693,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "EntityLayer": "1.0.0",
+          "FluentValidation.AspNetCore": "11.2.2",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.14",
           "Microsoft.AspNetCore.WebSockets": "2.2.1",
@@ -1710,6 +1711,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "FluentValidation.AspNetCore": "11.2.2",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.14",
           "Microsoft.AspNetCore.WebSockets": "2.2.1",
@@ -1764,16 +1766,16 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "FluentValidation/11.5.0": {
-      "sha512": "DExajJh+cguLk1XodH+LVVFuSsCqoEmXOQsxqP5rvVeUD1hIda59cyuL73LHJAYIrFatR8ZZ1H7kfejHN9XFWw==",
+    "FluentValidation/11.5.1": {
+      "sha512": "0h1Q5lNOLLyYTWMJmyNoMqhY4CBRvvUWvJP1R4F2CnmmzuWwvB0A8aVmw5+lOuwYnwUwCRrdeMLbc81F38ahNQ==",
       "type": "package",
-      "path": "fluentvalidation/11.5.0",
+      "path": "fluentvalidation/11.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.5.0.nupkg.sha512",
+        "fluentvalidation.11.5.1.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
@@ -4565,7 +4567,7 @@
     "net6.0": [
       "DataAccessLayer >= 1.0.0",
       "EntityLayer >= 1.0.0",
-      "FluentValidation >= 11.5.0",
+      "FluentValidation >= 11.5.1",
       "FluentValidation.AspNetCore >= 11.2.2",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.14",
       "Microsoft.AspNetCore.WebSockets >= 2.2.1",
@@ -4626,7 +4628,7 @@
         "dependencies": {
           "FluentValidation": {
             "target": "Package",
-            "version": "[11.5.0, )"
+            "version": "[11.5.1, )"
           },
           "FluentValidation.AspNetCore": {
             "target": "Package",

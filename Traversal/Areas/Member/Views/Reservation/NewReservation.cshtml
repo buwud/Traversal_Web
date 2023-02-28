@@ -25,12 +25,12 @@
     <br />
     <div>
         @Html.Label("Date")
-        <input type="date" min="@DateTime.Now.Year()-Date" asp-for="ReservationTime" placeholder="Reservation time" class="form-control" />
+        <input type="date" max="@DateTime.Now.AddYears(1).ToString("yyyy-MM-dd")" min="@DateTime.Now.ToString("yyyy-MM-dd")" asp-for="ReservationTime" placeholder="Reservation time" class="form-control" />
         <span asp-validation-for="ReservationTime" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
     <div>
-        @Html.Label("Confirm Password")
+        @Html.Label("Additional Description")
         <input type="text" maxlength="100" asp-for="Description" placeholder="Anything else you'd like to add?'" class="form-control" />
         <span asp-validation-for="Description" class="text-danger" style="color:crimson"></span>
     </div>

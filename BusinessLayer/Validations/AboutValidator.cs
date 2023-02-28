@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Validations
 {
-	internal class AboutValidator:AbstractValidator<About>
+	public class AboutValidator:AbstractValidator<About>
 	{
 		public AboutValidator() 
 		{
