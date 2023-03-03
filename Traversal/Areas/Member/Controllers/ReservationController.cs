@@ -66,7 +66,7 @@ namespace Traversal.Areas.Member.Controllers
                 }
                 TempData["ErrorMessage"] = "There was an error occurred in the process!";
             }
-
+ 
             List<SelectListItem> values = new List<SelectListItem>
             {
                 new SelectListItem { Value = "", Text = "-- Select Destination --", Selected = true }
