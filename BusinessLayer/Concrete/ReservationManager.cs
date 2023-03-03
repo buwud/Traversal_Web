@@ -23,6 +23,11 @@ namespace BusinessLayer.Concrete
             return _reservationDal.GetList();
         }
 
+        public List<Reservation> GetListPendings(int id)
+        {
+            return _reservationDal.GetListByFilter(x => x.AppUserId == id);
+        }
+
         public void TDelete(Reservation t)
         {
             _reservationDal.Delete(t);

@@ -3,10 +3,12 @@ using BusinessLayer.Validations;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing.Printing;
 
 namespace Traversal.Areas.Member.Controllers
 {
@@ -16,6 +18,14 @@ namespace Traversal.Areas.Member.Controllers
         DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
         ReservationManager _reservationManager = new ReservationManager(new EfReservationDal());
         //REFACTORİNG EYLENECEK
+
+        private readonly UserManager<AppUser> _userManager;
+
+        public ReservationController(UserManager<AppUser> userManager)
+        {
+            _userManager = userManager;
+        }
+
         public IActionResult CurrReservation()
         {
 
@@ -25,6 +35,12 @@ namespace Traversal.Areas.Member.Controllers
         {
 
             return View();
+        }
+        public async Task<IActionResult> PendingReservation()
+        {
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var valueList = _reservationManager.GetListPendings(values.Id);
+            return View(valueList);
         }
 
         [HttpGet]
