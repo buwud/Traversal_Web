@@ -21,7 +21,6 @@ namespace Traversal.Areas.Member.Controllers
 
             return View();
         }
-
         public IActionResult OldReservation()
         {
 
@@ -46,20 +45,17 @@ namespace Traversal.Areas.Member.Controllers
             return View();
         }
 
-
         [HttpPost]
         public IActionResult NewReservation(Reservation r)
         {
             NewReservationValidator validationRules = new NewReservationValidator();
             FluentValidation.Results.ValidationResult result = validationRules.Validate(r);
-            if (ModelState.IsValid)
+            if (result.IsValid)
             {
-                if (result.IsValid)
-                {
-                    r.AppUserId = 3;
-                    _reservationManager.TInsert(r);
-                    return RedirectToAction("CurrReservation");
-                }
+                r.AppUserId = 3;
+                r.Status = "Waiting for approval";//başlangıçta onay bekliyo olcak sonra bunu onaylicaklar
+                _reservationManager.TInsert(r);
+                return RedirectToAction("CurrReservation");
             }
             else
             {
@@ -68,10 +64,11 @@ namespace Traversal.Areas.Member.Controllers
                     ModelState.AddModelError("", items.ErrorMessage);
                 }
             }
+
             List<SelectListItem> values = new List<SelectListItem>
-            {
-                new SelectListItem { Value = "", Text = "-- Select Destination --", Selected = true }
-            };
+    {
+        new SelectListItem { Value = "", Text = "-- Select Destination --", Selected = true }
+    };
             values.AddRange(from x in _destinationManager.GetList()
                             select new SelectListItem
                             {
@@ -80,7 +77,8 @@ namespace Traversal.Areas.Member.Controllers
                             });
 
             ViewBag.values = values;
-            return View();
+            return View(r);
         }
+
     }
 }

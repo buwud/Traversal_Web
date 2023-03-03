@@ -19,24 +19,23 @@
     <br />
     <div>
         @Html.Label("Enrollment")
-        <input type="number" min="0" max="2000" placeholder="Number of people" asp-for="PersonNum" class="form-control" />
+        <input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" min="0" max="2000" placeholder="Number of people" asp-for="PersonNum" class="form-control" />
         <span asp-validation-for="PersonNum" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
     <div>
         @Html.Label("Date")
-        <input type="date" max="@DateTime.Now.AddYears(1).ToString("yyyy-MM-dd")" min="@DateTime.Now.ToString("yyyy-MM-dd")" asp-for="ReservationTime" placeholder="Reservation time" class="form-control" />
-        <span asp-validation-for="ReservationTime" class="text-danger" style="color:crimson"></span>
+    <input type="date" onkeydown="return false" onmousedown="(function(e){ e.preventDefault(); this.blur(); document.querySelector('input[type=date]').click(); }).call(this, event)" max="@DateTime.Now.AddYears(1).ToString("yyyy-MM-dd")" min="@DateTime.Now.ToString("yyyy-MM-dd")" asp-for="ReservationTime" placeholder="Reservation time" class="form-control" />
+    <span asp-validation-for="ReservationTime" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
     <div>
         @Html.Label("Additional Description")
-        <input type="text" maxlength="100" asp-for="Description" placeholder="Anything else you'd like to add?'" class="form-control" />
+        <input type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="100" asp-for="Description" placeholder="Anything else you'd like to add?'" class="form-control" />
         <span asp-validation-for="Description" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
-
-    <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
+    <div class="text-danger" asp-validation-summary="All" style="color:crimson"></div>
     <br />
     <button class="btn btn-primary" style="background-color:crimson">Make Reservation</button>
     <br />
