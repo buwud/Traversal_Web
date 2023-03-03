@@ -52,9 +52,10 @@ namespace Traversal.Areas.Member.Controllers
             FluentValidation.Results.ValidationResult result = validationRules.Validate(r);
             if (result.IsValid)
             {
-                r.AppUserId = 3;
+                r.AppUserId = 8;
                 r.Status = "Waiting for approval";//başlangıçta onay bekliyo olcak sonra bunu onaylicaklar
                 _reservationManager.TInsert(r);
+                TempData["SuccessMessage"] = "Reservation created successfully! Stay tuned for updates for the approval process, check status on the current reservation page.";
                 return RedirectToAction("CurrReservation");
             }
             else
@@ -63,12 +64,13 @@ namespace Traversal.Areas.Member.Controllers
                 {
                     ModelState.AddModelError("", items.ErrorMessage);
                 }
+                TempData["ErrorMessage"] = "There was an error occurred in the process!";
             }
 
             List<SelectListItem> values = new List<SelectListItem>
-    {
-        new SelectListItem { Value = "", Text = "-- Select Destination --", Selected = true }
-    };
+            {
+                new SelectListItem { Value = "", Text = "-- Select Destination --", Selected = true }
+            };
             values.AddRange(from x in _destinationManager.GetList()
                             select new SelectListItem
                             {

@@ -38,5 +38,13 @@
     <div class="text-danger" asp-validation-summary="All" style="color:crimson"></div>
     <br />
     <button class="btn btn-primary" style="background-color:crimson">Make Reservation</button>
+    @if(TempData.ContainsKey("SuccessMessage"))
+    {
+        <script>alert('@TempData["SuccessMessage"]');</script>
+    }
+    @if(TempData.ContainsKey("ErrorMessage"))
+    {
+        <script>alert('@TempData["ErrorMessage"]')</script>
+    }
     <br />
 </form>
