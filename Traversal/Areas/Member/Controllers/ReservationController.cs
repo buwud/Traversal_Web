@@ -39,7 +39,7 @@ namespace Traversal.Areas.Member.Controllers
         public async Task<IActionResult> PendingReservation()
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
-            var valueList = _reservationManager.GetListPendings(values.Id);
+            var valueList = _reservationManager.GetListPending(values.Id);
             return View(valueList);
         }
 
@@ -56,7 +56,6 @@ namespace Traversal.Areas.Member.Controllers
                                 Text = x.City,
                                 Value = x.DestinationID.ToString()
                             });
-
             ViewBag.values = values;
             return View();
         }
@@ -69,6 +68,7 @@ namespace Traversal.Areas.Member.Controllers
             if (result.IsValid)
             {
                 r.AppUserId = 8;
+                r.DestinationID = r.DestinationID;
                 r.Status = "Waiting for approval";//başlangıçta onay bekliyo olcak sonra bunu onaylicaklar
                 _reservationManager.TInsert(r);
                 TempData["SuccessMessage"] = "Reservation created successfully! Stay tuned for updates for the approval process, check status on the current reservation page.";
@@ -93,7 +93,6 @@ namespace Traversal.Areas.Member.Controllers
                                 Text = x.City,
                                 Value = x.DestinationID.ToString()
                             });
-
             ViewBag.values = values;
             return View(r);
         }

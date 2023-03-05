@@ -22,12 +22,12 @@ namespace Traversal.Areas.Member.Controllers
         {
             UserEditViewModel m = new UserEditViewModel();
             m.GenderOptions = new List<SelectListItem>()
-    {
-     new SelectListItem{Value=" ",Text="Select Gender"},
-     new SelectListItem{Value="Female",Text="Female"},
-     new SelectListItem{Value="Male",Text="Male"},
-     new SelectListItem{Value="Others",Text="Others"}
-    };
+            {
+                new SelectListItem{Value=" ",Text="Select Gender"},
+                new SelectListItem{Value="Female",Text="Female"},
+                new SelectListItem{Value="Male",Text="Male"},
+                new SelectListItem{Value="Others",Text="Others"}
+            };
 
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
             if (ModelState.IsValid)
@@ -51,7 +51,6 @@ namespace Traversal.Areas.Member.Controllers
                 throw;
             }
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Index(UserEditViewModel m)

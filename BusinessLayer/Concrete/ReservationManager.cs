@@ -23,10 +23,25 @@ namespace BusinessLayer.Concrete
             return _reservationDal.GetList();
         }
 
-        public List<Reservation> GetListPendings(int id)
+        public List<Reservation> GetListApproved(int id)
         {
-            return _reservationDal.GetListByFilter(x => x.AppUserId == id);
+            throw new NotImplementedException();
         }
+
+        public List<Reservation> GetListNotApproved(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Reservation> GetListPending(int id)
+        {
+            return _reservationDal.GetListPending(id);
+        }
+
+        /*public List<Reservation> GetListPendings(int id)
+        {
+            return _reservationDal.GetListByFilter(x => x.AppUserId == id && x.Status== "Waiting for approval");
+        }*/
 
         public void TDelete(Reservation t)
         {

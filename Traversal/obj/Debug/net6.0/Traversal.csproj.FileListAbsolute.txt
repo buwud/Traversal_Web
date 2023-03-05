@@ -75,7 +75,6 @@ C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.GeneratedM
 C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.AssemblyInfoInputs.cache
 C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.AssemblyInfo.cs
 C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.csproj.CoreCompileInputs.cache
-C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.RazorAssemblyInfo.cache
 C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.RazorAssemblyInfo.cs
@@ -303,3 +302,4 @@ C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\runtimes\win\lib\net
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\obj\Debug\net6.0\Traversal.MvcApplicationPartsAssemblyInfo.cs
