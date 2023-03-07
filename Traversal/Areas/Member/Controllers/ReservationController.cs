@@ -26,15 +26,28 @@ namespace Traversal.Areas.Member.Controllers
             _userManager = userManager;
         }
 
-        public IActionResult CurrReservation()
+        /*public async Task<IActionResult> CurrReservation()
         {
+            //???
+            return View();
+        }*/
+        //var valueList = _reservationManager.GetListAll(values.Id);
+        public async Task<IActionResult> MyReservations()
+        {
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var valueList = _reservationManager.GetListAll(values.Id).OrderByDescending(x=>x.ReservationTime).ToList();
+            ViewBag.table = valueList;
+
+            var valueList1 = _reservationManager.GetListPreviousReservations(values.Id).OrderByDescending(x => x.ReservationTime).ToList();
+            ViewBag.table1 = valueList1;
 
             return View();
         }
-        public IActionResult OldReservation()
+        public async Task<IActionResult> OldReservation()
         {
-
-            return View();
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var valueList = _reservationManager.GetListPreviousReservations(values.Id);
+            return View(valueList);
         }
         public async Task<IActionResult> PendingReservation()
         {

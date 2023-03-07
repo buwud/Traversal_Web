@@ -23,14 +23,19 @@ namespace BusinessLayer.Concrete
             return _reservationDal.GetList();
         }
 
+        public List<Reservation> GetListAll(int id)
+        {
+            return _reservationDal.GetListAll(id);
+        }
+
         public List<Reservation> GetListApproved(int id)
         {
-            throw new NotImplementedException();
+            return _reservationDal.GetListApproved(id);
         }
 
         public List<Reservation> GetListNotApproved(int id)
         {
-            throw new NotImplementedException();
+            return _reservationDal.GetListNotApproved(id);
         }
 
         public List<Reservation> GetListPending(int id)
@@ -38,11 +43,10 @@ namespace BusinessLayer.Concrete
             return _reservationDal.GetListPending(id);
         }
 
-        /*public List<Reservation> GetListPendings(int id)
+        public List<Reservation> GetListPreviousReservations(int id)
         {
-            return _reservationDal.GetListByFilter(x => x.AppUserId == id && x.Status== "Waiting for approval");
-        }*/
-
+            return _reservationDal.GetListPreviousReservations(id);
+        }
         public void TDelete(Reservation t)
         {
             _reservationDal.Delete(t);

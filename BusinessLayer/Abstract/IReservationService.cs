@@ -12,5 +12,7 @@ namespace BusinessLayer.Abstract
         List<Reservation> GetListPending(int id);
         List<Reservation> GetListApproved(int id);
         List<Reservation> GetListNotApproved(int id);
+        List<Reservation> GetListPreviousReservations(int id);
+        List<Reservation> GetListAll(int id);
     }
 }
