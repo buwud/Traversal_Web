@@ -9,10 +9,12 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 using System.Drawing.Printing;
+using System.Security.Claims;
 
 namespace Traversal.Areas.Member.Controllers
 {
     [Area("Member")]
+    [Route("Member/Reservation/[action]")]
     public class ReservationController : Controller
     {
         DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
@@ -55,7 +57,7 @@ namespace Traversal.Areas.Member.Controllers
             var valueList = _reservationManager.GetListPending(values.Id);
             return View(valueList);
         }
-
+        [Area("Member")]
         [HttpGet]
         public IActionResult NewReservation()
         {
@@ -74,18 +76,18 @@ namespace Traversal.Areas.Member.Controllers
         }
 
         [HttpPost]
-        public IActionResult NewReservation(Reservation r)
+        public IActionResult NewReservation(Reservation r, int Destination)
         {
             NewReservationValidator validationRules = new NewReservationValidator();
             FluentValidation.Results.ValidationResult result = validationRules.Validate(r);
             if (result.IsValid)
             {
-                r.AppUserId = 8;
-                r.DestinationID = r.DestinationID;
+                r.AppUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                r.DestinationID = Destination;
                 r.Status = "Waiting for approval";//başlangıçta onay bekliyo olcak sonra bunu onaylicaklar
                 _reservationManager.TInsert(r);
                 TempData["SuccessMessage"] = "Reservation created successfully! Stay tuned for updates for the approval process, check status on the current reservation page.";
-                return RedirectToAction("CurrReservation");
+                return RedirectToAction("MyReservations", "Reservation", new { area = "Member" });
             }
             else
             {
