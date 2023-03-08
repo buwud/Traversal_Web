@@ -140,6 +140,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0ZlYXR1cmVQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/yeolb/Desktop/Traversal/Traversal/Views/Shared/Components/_MemberAnnouncementPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX01lbWJlckFubm91bmNlbWVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yeolb/Desktop/Traversal/Traversal/Views/Shared/Components/_MemberHeadingPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX01lbWJlckhlYWRpbmdQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yeolb/Desktop/Traversal/Traversal/Views/Shared/Components/_MemberInfoPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX01lbWJlckluZm9QYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yeolb/Desktop/Traversal/Traversal/Views/Shared/Components/_MemberLastResPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX01lbWJlckxhc3RSZXNQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yeolb/Desktop/Traversal/Traversal/Views/Shared/Components/_MemberMorePartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX01lbWJlck1vcmVQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/yeolb/Desktop/Traversal/Traversal/Views/Shared/Components/_PopularDesPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1BvcHVsYXJEZXNQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
