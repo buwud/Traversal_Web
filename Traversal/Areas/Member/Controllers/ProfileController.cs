@@ -62,7 +62,7 @@ namespace Traversal.Areas.Member.Controllers
                 var resource = Directory.GetCurrentDirectory();
                 var extension = Path.GetExtension(m.Image.FileName);
                 var imageName = Guid.NewGuid() + extension;
-                var saveLocation = resource + "/wwwroot/MemberImages" + imageName;
+                var saveLocation = resource + "/wwwroot/MemberImages/" + imageName;
                 var stream = new FileStream(saveLocation, FileMode.Create);
                 await m.Image.CopyToAsync(stream);
                 user.ImageURL = imageName;

@@ -2624,12 +2624,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberImages8bd36efb-5647-4fd2-a6af-5d60218c1834.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberImages\d9c23f2b-3492-4a51-a019-d5bf948be8e7.png))">
       <SourceType>Package</SourceType>
       <SourceId>Traversal</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Traversal</BasePath>
-      <RelativePath>MemberImages8bd36efb-5647-4fd2-a6af-5d60218c1834.png</RelativePath>
+      <RelativePath>MemberImages/d9c23f2b-3492-4a51-a019-d5bf948be8e7.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2638,23 +2638,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberImages8bd36efb-5647-4fd2-a6af-5d60218c1834.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberImagesb3671239-62a7-4b97-8d23-bcb7551048e7.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>Traversal</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Traversal</BasePath>
-      <RelativePath>MemberImagesb3671239-62a7-4b97-8d23-bcb7551048e7.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberImagesb3671239-62a7-4b97-8d23-bcb7551048e7.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberImages\d9c23f2b-3492-4a51-a019-d5bf948be8e7.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\soft-ui-dashboard-main\assets\css\nucleo-icons.css))">
       <SourceType>Package</SourceType>

@@ -18,7 +18,7 @@ namespace Traversal.Areas.ViewComponents.Dashboard
         {
             var value = _userManager.FindByNameAsync(User.Identity.Name).Result;
             ViewBag.Name = value.Name + " " + value.SurName;
-
+            ViewBag.ProfilePhoto = value.ImageURL;
             return View();
         }
     }

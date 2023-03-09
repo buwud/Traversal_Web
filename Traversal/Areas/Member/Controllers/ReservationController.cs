@@ -28,12 +28,6 @@ namespace Traversal.Areas.Member.Controllers
             _userManager = userManager;
         }
 
-        /*public async Task<IActionResult> CurrReservation()
-        {
-            //???
-            return View();
-        }*/
-        //var valueList = _reservationManager.GetListAll(values.Id);
         public async Task<IActionResult> MyReservations()
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
@@ -45,19 +39,6 @@ namespace Traversal.Areas.Member.Controllers
 
             return View();
         }
-        public async Task<IActionResult> OldReservation()
-        {
-            var values = await _userManager.FindByNameAsync(User.Identity.Name);
-            var valueList = _reservationManager.GetListPreviousReservations(values.Id);
-            return View(valueList);
-        }
-        public async Task<IActionResult> PendingReservation()
-        {
-            var values = await _userManager.FindByNameAsync(User.Identity.Name);
-            var valueList = _reservationManager.GetListPending(values.Id);
-            return View(valueList);
-        }
-        [Area("Member")]
         [HttpGet]
         public IActionResult NewReservation()
         {
