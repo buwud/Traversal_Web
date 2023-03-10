@@ -67,38 +67,40 @@ namespace Traversal.Areas.Member.Controllers
                 await m.Image.CopyToAsync(stream);
                 user.ImageURL = imageName;
             }
-            user.Name = m.Name;
-            user.SurName = m.Surname;
-            user.Email = m.Email;
-            user.PhoneNumber = m.Phone;
-            user.Gender = m.Gender;
-            user.Age = m.Age;
-            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, m.Password);
-            
-            var result = await _userManager.UpdateAsync(user);
+            if (ModelState.IsValid)
+            {
+                user.Name = m.Name;
+                user.SurName = m.Surname;
+                user.Email = m.Email;
+                user.PhoneNumber = m.Phone;
+                user.Gender = m.Gender;
+                user.Age = m.Age;
+                user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, m.Password);
+
+                var result = await _userManager.UpdateAsync(user);
 
 
-            if (result.Succeeded)
-            {
-                return RedirectToAction("SignIn", "Login");
-            }
-            else
-            {
-                // add error messages to the model state
-                foreach (var error in result.Errors)
+                if (result.Succeeded)
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    return RedirectToAction("SignIn", "Login");
                 }
-
-                m.GenderOptions = new List<SelectListItem>()
+                else
+                {
+                    // add error messages to the model state
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                }
+            }
+            m.GenderOptions = new List<SelectListItem>()
                 {
                     new SelectListItem{Value="",Text="Select Gender"},
                     new SelectListItem{Value="Female",Text="Female"},
                     new SelectListItem{Value="Male",Text="Male"},
                     new SelectListItem{Value="Others",Text="Others"}
                 };
-                return View(m);
-            }
+            return View(m);
         }
     }
 }
