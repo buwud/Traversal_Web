@@ -11,30 +11,29 @@
             <div class="row">
                 @foreach(var item in Model)
                 {
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                    <div class="card card-blog card-plain">
-                        <div class="position-relative">
-                            <a class="d-block shadow-xl border-radius-xl">
-                                <img src="@item.Destination.Image1" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                            </a>
-                        </div>
-                        <div class="card-body px-1 pb-0">
-                            <p class="text-gradient text-dark mb-2 text-sm">@item.ReservationTime.ToShortDateString()</p>
-                            <a href="javascript:;">
-                                <h5>
-                                    @item.Destination.City
-                                </h5>
-                            </a>
-                            <p class="mb-4 text-sm">
-                                @item.Status
-                            </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                @*<button type="button" class="btn btn-outline-primary btn-sm mb-0" href="/Member/Reservation/MyReservations/">View More</button>*@
+                    <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+                        <div class="card card-blog card-plain">
+                            <div class="position-relative">
+                                <a class="d-block shadow-xl border-radius-xl">
+                                    <img src="@item.Destination.Image" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                                </a>
+                            </div>
+                            <div class="card-body px-1 pb-0">
+                                <p class="text-gradient text-dark mb-2 text-sm">Status: @item.Status</p>
+                                <a href="javascript:;">
+                                    <h5>
+                                        @item.Destination.City
+                                    </h5>
+                                </a>
+                                <p class="mb-4 text-sm">
+                                    Reservation Date: @item.ReservationTime.ToShortDateString()
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
                                     <a class="btn btn-outline-primary btn-sm mb-0" href="/Member/Reservation/MyReservations/">View More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 }
                 <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
                     <div class="card h-100 card-plain border">
