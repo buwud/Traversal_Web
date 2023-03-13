@@ -3,14 +3,27 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
+@await Html.PartialAsync("/Views/AdminLayoutPartial/_HeaderPartial.cshtml")
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>_AdminLayout</title>
-</head>
-<body>
+<body class="g-sidenav-show  bg-gray-100">
+    
+    @await Html.PartialAsync("/Views/AdminLayoutPartial/_SidebarPartial.cshtml")
+
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+
+         @await Html.PartialAsync("/Views/AdminLayoutPartial/_NavbarPartial.cshtml")
+
+        <div class="container-fluid py-4">
+             
+            @RenderBody()
+
+            @await Html.PartialAsync("/Views/AdminLayoutPartial/_FooterPartial.cshtml")
+
+        </div>
+    </main>
+    
+    @await Html.PartialAsync("/Views/AdminLayoutPartial/_RightbarPartial.cshtml")
+ 
+    @await Html.PartialAsync("/Views/AdminLayoutPartial/_ScriptPartial.cshtml")
+
 </body>
-</html>
-@RenderBody()
