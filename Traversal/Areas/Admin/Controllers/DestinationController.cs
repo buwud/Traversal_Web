@@ -1,7 +1,10 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.Validations;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol;
 
 namespace Traversal.Areas.Admin.Controllers
 {
@@ -23,9 +26,25 @@ namespace Traversal.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult AddDestination(Destination d)
         {
-            _destinationManager.TInsert(d);
-            return RedirectToAction("Index");
+            AddDestinationValidator validationRules=new AddDestinationValidator();
+            ValidationResult result = validationRules.Validate(d);
+            if (result.IsValid)
+            {
+                d.Status = true;
+                _destinationManager.TInsert(d);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+                return View(d);
+            }
         }
+            
+            
         //Deletion
         [HttpGet]
         public IActionResult DeleteDestination(int id)
