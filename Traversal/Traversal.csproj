@@ -54,6 +54,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Member\Data\" />
     <Folder Include="wwwroot\MemberImages\" />
+    <Folder Include="wwwroot\AdminImages\" />
   </ItemGroup>
 
 </Project>

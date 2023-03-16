@@ -3,6 +3,7 @@ using BusinessLayer.Validations;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol;
 
@@ -12,6 +13,7 @@ namespace Traversal.Areas.Admin.Controllers
     public class DestinationController : Controller
     {
         DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
+
         public IActionResult Index()
         {
             var values = _destinationManager.GetList();
@@ -24,10 +26,41 @@ namespace Traversal.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult AddDestination(Destination d)
+        public async Task<IActionResult> AddDestination(Destination d)
         {
             AddDestinationValidator validationRules=new AddDestinationValidator();
             ValidationResult result = validationRules.Validate(d);
+            if (d.Image != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(d.Image.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/AdminImages/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await d.Image.CopyToAsync(stream);
+                d.ImageS = imageName;
+            }
+            if (d.Image1 != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(d.Image1.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/AdminImages/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await d.Image1.CopyToAsync(stream);
+                d.Image1S = imageName;
+            }
+            if (d.CoverImage != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(d.CoverImage.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/AdminImages/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await d.CoverImage.CopyToAsync(stream);
+                d.CoverImageS = imageName;
+            }
+
             if (result.IsValid)
             {
                 d.Status = true;
