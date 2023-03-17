@@ -95,9 +95,44 @@ namespace Traversal.Areas.Admin.Controllers
             return View(value);
         }
         [HttpPost]
-        public IActionResult EditDestination(Destination d)
+        public async Task<IActionResult> EditDestination(Destination d)
         {
-            _destinationManager.TUpdate(d);
+            var value = _destinationManager.TGetByID(d.DestinationID);
+
+            if (d.Image != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(d.Image.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/AdminImages/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await d.Image.CopyToAsync(stream);
+                value.ImageS = imageName;
+            }
+
+            if (d.Image1 != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(d.Image1.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/AdminImages/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await d.Image1.CopyToAsync(stream);
+                value.Image1S = imageName;
+            }
+
+            if (d.CoverImage != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(d.CoverImage.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/AdminImages/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await d.CoverImage.CopyToAsync(stream);
+                value.CoverImageS = imageName;
+            }
+
+            _destinationManager.TUpdate(value);
             return RedirectToAction("Index");
         }
     }

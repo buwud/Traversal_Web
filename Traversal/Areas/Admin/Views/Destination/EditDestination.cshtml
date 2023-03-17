@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-
 <h6>Edit Destination Page</h6>
 <form method="post" enctype="multipart/form-data">
     <input type="hidden" asp-for="DestinationID" />
@@ -17,7 +16,7 @@
     <br />
     <div>
         @Html.Label("Staytime")
-        <input type="text" placeholder="1 day, 2 night.." asp-for="StayTime" class="form-control" />
+        <input type="text" placeholder="1 day, 2 nights.." asp-for="StayTime" class="form-control" />
         <span asp-validation-for="StayTime" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
