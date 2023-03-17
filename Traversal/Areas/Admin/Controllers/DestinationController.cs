@@ -10,9 +10,10 @@ using NuGet.Protocol;
 namespace Traversal.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Route("Admin/[controller]/[action]")]
     public class DestinationController : Controller
     {
-        DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
+        private readonly DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
 
         public IActionResult Index()
         {

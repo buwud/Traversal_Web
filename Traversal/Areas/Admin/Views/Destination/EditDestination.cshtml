@@ -1,0 +1,76 @@
+﻿@model EntityLayer.Concrete.Destination
+
+@{
+    ViewData["Title"] = "EditDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h6>Edit Destination Page</h6>
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="DestinationID" />
+    <div>
+        @Html.Label("City")
+        <input type="text" pattern="[^\d]*" placeholder="City name" asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Staytime")
+        <input type="text" placeholder="1 day, 2 night.." asp-for="StayTime" class="form-control" />
+        <span asp-validation-for="StayTime" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Price")
+        <input type="number" placeholder="Price in $" asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Capacity")
+        <input type="number" placeholder="number of people can attend" asp-for="Capacity" class="form-control" />
+        <span asp-validation-for="Capacity" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Image 1")
+        <input type="file" placeholder="Photo of the city" asp-for="Image" class="form-control" />
+        <span asp-validation-for="Image" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Image 2")
+        <input type="file" placeholder="Photo of the city" asp-for="Image1" class="form-control" />
+        <span asp-validation-for="Image1" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Cover Image")
+        <input type="file" placeholder="photo of the city for the cover" asp-for="CoverImage" class="form-control" />
+        <span asp-validation-for="CoverImage" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Description")
+        <textarea cols="30" rows="5" placeholder="description for more info" asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Details 1")
+        <textarea cols="30" rows="5" placeholder="details.." asp-for="Details" class="form-control"></textarea>
+        <span asp-validation-for="Details" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Details 2")
+        <textarea cols="30" rows="5" placeholder="details.." asp-for="Details1" class="form-control"></textarea>
+        <span asp-validation-for="Details1" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
+    <br />
+    <button class="btn btn-primary" style="background-color:crimson">Update</button>
+    <br />
+</form>
