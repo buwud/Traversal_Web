@@ -77,19 +77,14 @@ namespace Traversal.Areas.Admin.Controllers
             }
         }
             
-            
         //Deletion
-        [HttpGet]
         public IActionResult DeleteDestination(int id)
         {
             var value = _destinationManager.TGetByID(id);
-            return View(value);
-        }
-        [HttpPost]
-        public IActionResult DeleteDestination(Destination d)
-        {
-            _destinationManager.TDelete(d);
-            return RedirectToAction("Index");
+            _destinationManager.TDelete(value);
+            //bulunuduğum sayfanın url ini alıyor
+            string returnUrl = Request.Headers["Referer"].ToString();
+            return Redirect(returnUrl);
         }
         //Edition
         [HttpGet]
