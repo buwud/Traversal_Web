@@ -49,6 +49,12 @@ builder.Services.AddAuthentication(
         x.ExpireTimeSpan = TimeSpan.FromMinutes(10);
     });
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Login/SignIn/";
+    options.LogoutPath = "/Login/SignIn/";
+});
+
 builder.Services.Configure<FormOptions>(options =>
 {
     options.ValueLengthLimit = int.MaxValue;
