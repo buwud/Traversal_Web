@@ -30,17 +30,17 @@ namespace BusinessLayer.Concrete
 
         public List<Reservation> GetListApproved(int id)
         {
-            return _reservationDal.GetListApproved(id);
+            throw new NotImplementedException();
         }
 
         public List<Reservation> GetListNotApproved(int id)
         {
-            return _reservationDal.GetListNotApproved(id);
+            throw new NotImplementedException();
         }
 
         public List<Reservation> GetListPending(int id)
         {
-            return _reservationDal.GetListPending(id);
+            throw new NotImplementedException();
         }
 
         public List<Reservation> GetListPreviousReservations(int id)

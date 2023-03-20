@@ -27,6 +27,9 @@ builder.Services.AddValidatorsFromAssemblyContaining<NewReservationValidator>();
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
 
+builder.Services.AddScoped<ICommentService, CommentManager>();
+builder.Services.AddScoped<ICommentDal, EfCommentDal>();
+
 builder.Services.AddHttpClient();
 
 //builder.Services.AddAutoMapper(typeof(Startup));

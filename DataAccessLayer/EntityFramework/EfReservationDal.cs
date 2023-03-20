@@ -21,7 +21,7 @@ namespace DataAccessLayer.EntityFramework
                 return context.Reservations.Include(x => x.Destination).Where(x =>x.AppUserId == id && x.ReservationTime > DateTime.Now).ToList();
             }
         }
-        public List<Reservation> GetListApproved(int id)
+        /*public List<Reservation> GetListApproved(int id)
         {
             using (var context = new Context())
             {
@@ -43,7 +43,7 @@ namespace DataAccessLayer.EntityFramework
             {
                 return context.Reservations.Include(x => x.Destination).Where(x => x.Status == "Waiting for approval" && x.AppUserId == id && x.ReservationTime > DateTime.Now).ToList();
             }
-        }
+        }*/
         public List<Reservation> GetListPreviousReservations(int id)
         {
             using(var context=new Context())
