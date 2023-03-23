@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
 using BusinessLayer.Validations;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
@@ -13,11 +14,18 @@ namespace Traversal.Areas.Admin.Controllers
     //[Route("Admin/[controller]/[action]")]
     public class DestinationController : Controller
     {
-        private readonly DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
+        private readonly IDestinationService _destinationService;
+
+        public DestinationController(IDestinationService destinationService)
+        {
+            _destinationService = destinationService;
+        }
+
+        //private readonly DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
 
         public IActionResult Index()
         {
-            var values = _destinationManager.GetList();
+            var values = _destinationService.GetList();
             return View(values);
         }
         //Addition
@@ -65,7 +73,7 @@ namespace Traversal.Areas.Admin.Controllers
             if (result.IsValid)
             {
                 d.Status = true;
-                _destinationManager.TInsert(d);
+                _destinationService.TInsert(d);
                 return RedirectToAction("Index");
             }
             else
@@ -81,8 +89,8 @@ namespace Traversal.Areas.Admin.Controllers
         //Deletion
         public IActionResult DeleteDestination(int id)
         {
-            var value = _destinationManager.TGetByID(id);
-            _destinationManager.TDelete(value);
+            var value = _destinationService.TGetByID(id);
+            _destinationService.TDelete(value);
             //bulunuduğum sayfanın url ini alıyor
             string returnUrl = Request.Headers["Referer"].ToString();
             return Redirect(returnUrl);
@@ -91,13 +99,13 @@ namespace Traversal.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult EditDestination(int id)
         {
-            var value = _destinationManager.TGetByID(id);
+            var value = _destinationService.TGetByID(id);
             return View(value);
         }
         [HttpPost]
         public async Task<IActionResult> EditDestination(Destination d)
         {
-            var value = _destinationManager.TGetByID(d.DestinationID);
+            var value = _destinationService.TGetByID(d.DestinationID);
 
             if (d.Image != null)
             {
@@ -132,7 +140,7 @@ namespace Traversal.Areas.Admin.Controllers
                 value.CoverImageS = imageName;
             }
 
-            _destinationManager.TUpdate(value);
+            _destinationService.TUpdate(value);
             return RedirectToAction("Index");
         }
     }
