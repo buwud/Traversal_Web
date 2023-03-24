@@ -1,17 +1,21 @@
 ﻿using BusinessLayer.Abstract;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Traversal.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [AllowAnonymous]
     public class GuestController : Controller
     {
         private readonly IAppUserService _appUserService;
+        private readonly IReservationService _reservationService;
 
-        public GuestController(IAppUserService appUserService)
+        public GuestController(IAppUserService appUserService, IReservationService reservationService)
         {
             _appUserService = appUserService;
+            _reservationService = reservationService;
         }
 
         public IActionResult Index()
@@ -43,10 +47,10 @@ namespace Traversal.Areas.Admin.Controllers
             _appUserService.GetList();
             return View();
         }
-        public IActionResult GuestHistory()
+        public IActionResult GuestHistory(int id)
         {
-            _appUserService.GetList();
-            return View();
+            var values = _reservationService.GetListAll(id);
+            return View(values);
         }
 
     }

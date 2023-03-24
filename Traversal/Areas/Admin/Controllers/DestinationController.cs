@@ -4,6 +4,7 @@ using BusinessLayer.Validations;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol;
@@ -11,6 +12,7 @@ using NuGet.Protocol;
 namespace Traversal.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [AllowAnonymous]
     //[Route("Admin/[controller]/[action]")]
     public class DestinationController : Controller
     {
@@ -20,8 +22,6 @@ namespace Traversal.Areas.Admin.Controllers
         {
             _destinationService = destinationService;
         }
-
-        //private readonly DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
 
         public IActionResult Index()
         {
