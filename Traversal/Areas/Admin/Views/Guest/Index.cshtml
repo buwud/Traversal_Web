@@ -1,0 +1,70 @@
+﻿@using EntityLayer.Concrete
+@model List<AppUser>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int counter = 0;
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Guest List</h6>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name-Surname</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Username</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">E-mail</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Edit</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Comments</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tour History</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete</th>
+                                    <th class="text-secondary opacity-7"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        @{
+                                            counter += 1;
+                                        }
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">@counter</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@item.Name @item.SurName</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">@item.UserName</span>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Email</p>
+                                        </td>
+                                        <td class="text-center"><a href="/Admin/Guest/EditGuest/@item.Id" class="badge badge-sm bg-gradient-success align-middle">Edit</a></td>
+                                        <td class="text-center"><a href="/Admin/Guest/GuestComments/@item.Id" class="badge badge-sm bg-gradient-info align-middle">Comments</a></td>
+                                        <td class="text-center"><a href="/Admin/Guest/GuestHistory/@item.Id" class="badge badge-sm bg-gradient-primary align-middle">Tours</a></td>
+                                        <td class="text-center"><a href="/Admin/Guest/DeleteGuest/@item.Id" class="badge badge-sm bg-gradient-danger align-middle">Delete</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <a href="/Admin/Guest/AddGuest/" class="badge badge-sm bg-gradient-primary">Add Guest</a>
+            </div>
+        </div>
+    </div>
+</div>
