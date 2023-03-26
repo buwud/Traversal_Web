@@ -75,6 +75,8 @@ if (!app.Environment.IsDevelopment())
 	app.UseHsts();
 }
 
+app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404","?code={0}"); 
+//{0} dışarıdan bir kod alabilir demek
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();

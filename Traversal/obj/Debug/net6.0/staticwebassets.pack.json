@@ -537,6 +537,50 @@
       "PackagePath": "staticwebassets\\Traversal-Starter\\starter-license-W3Layouts.txt"
     },
     {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14.zip",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14.zip"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\css\\style.css",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\index.html",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-error-404-14\\readme.txt",
+      "PackagePath": "staticwebassets\\colorlib-error-404-14\\readme.txt"
+    },
+    {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\colorlib-regform-7\\css\\style.css",
       "PackagePath": "staticwebassets\\colorlib-regform-7\\css\\style.css"
     },
