@@ -26,6 +26,9 @@ namespace BusinessLayer.Container
 
             serviceDescriptors.AddScoped<IAppUserService, AppUserManager>();
             serviceDescriptors.AddScoped<IAppUserDal, EfAppUserDal>();
+
+            serviceDescriptors.AddScoped<IGuideService, GuideManager>();
+            serviceDescriptors.AddScoped<IGuideDal, EfGuideDal>();
         }
     }
 }

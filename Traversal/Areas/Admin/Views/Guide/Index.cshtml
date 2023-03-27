@@ -1,0 +1,77 @@
+﻿@using EntityLayer.Concrete
+@model List<Guide>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int counter = 0;
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Guest List</h6>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center"></th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center"></th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">Name-Surname</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">About</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Edit</th>
+                                    <th class="text-secondary opacity-7"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        @{
+                                            counter += 1;
+                                        }
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold text-center">@counter</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    <img src="@item.Image" class="avatar avatar-sm me-3">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold text-center">@item.Name</span>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0 text-center">@item.Description</p>
+                                        </td>
+                                        
+                                            @{
+                                                if (item.Status)
+                                                {
+                                                <td class="text-center"><a href="#" class="badge badge-sm bg-gradient-danger align-middle">Disable</a></td>
+                                                }
+                                                else
+                                                {
+                                                <td class="text-center"><a href="#" class="badge badge-sm bg-gradient-success align-middle">Enable</a></td>
+                                                }
+                                            }
+                                        
+                                        <td class="text-center"><a href="/Admin/Guide/EditGuide/@item.GuideID" class="badge badge-sm bg-gradient-success align-middle">Edit</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <a href="/Admin/Guide/AddGuide/" class="badge badge-sm bg-gradient-primary">Add Guide</a>
+            </div>
+        </div>
+    </div>
+</div>
