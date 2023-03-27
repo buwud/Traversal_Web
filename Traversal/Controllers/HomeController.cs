@@ -15,11 +15,18 @@ namespace Traversal.Controllers
 
 		public IActionResult Index()
 		{
+			_logger.LogInformation("Index sayfası çağırıldı");
 			return View();
 		}
 
 		public IActionResult Privacy()
 		{
+			DateTime date = Convert.ToDateTime(DateTime.Now.ToLongTimeString());            _logger.LogInformation(date + " Privacy sayfası çağırıldı");
+            return View();
+		}
+		public IActionResult Test()
+		{
+			_logger.LogInformation("Test sayfası çağırıldı");
 			return View();
 		}
 

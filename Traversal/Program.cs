@@ -19,11 +19,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IReservationService, ReservationManager>();
-builder.Services.AddScoped<IReservationDal, EfReservationDal>();
-
 builder.Services.AddScoped<IValidator<Reservation>, NewReservationValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<NewReservationValidator>();
+
+//LOGLAMA 
+builder.Services.AddLogging(x =>
+{
+    x.ClearProviders();//log varsa temizliyor
+    x.SetMinimumLevel(LogLevel.Debug);//log işlemi debugtan itibaten başlasın
+    x.AddDebug();
+});
 
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
