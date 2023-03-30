@@ -12,7 +12,9 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +52,11 @@ builder.Services.AddMvc(Config =>
 });
 builder.Services.AddMvc();
 
+//LOGLAMA
+
+
+
+
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme
     ).AddCookie(x =>
@@ -67,6 +74,12 @@ builder.Services.Configure<FormOptions>(options =>
 {
     options.ValueLengthLimit = int.MaxValue;
     options.MultipartBodyLengthLimit = 5242880;//photo yükleme sınırını 5mb a ayarladım
+});
+
+builder.Host.ConfigureLogging(logging =>
+{
+    var path = Directory.GetCurrentDirectory();
+    logging.AddFile($"{path}/Logs/Log1.txt");
 });
 
 var app = builder.Build();
