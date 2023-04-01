@@ -79,6 +79,7 @@ builder.Services.Configure<FormOptions>(options =>
 builder.Host.ConfigureLogging(logging =>
 {
     var path = Directory.GetCurrentDirectory();
+    logging.SetMinimumLevel(LogLevel.Debug);//*
     logging.AddFile($"{path}/Logs/Log1.txt");
 });
 

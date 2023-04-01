@@ -18,7 +18,6 @@ namespace Traversal.Controllers
         {
             p.CommentDate= Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
             p.CommentState = true;
-            //p.DestinationID = 2;
             _commentManager.TInsert(p);
             return RedirectToAction("Index", "Destination");
         }
