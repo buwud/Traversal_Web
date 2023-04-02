@@ -310,3 +310,16 @@ C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\Serilog.Formatting.C
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\Serilog.Sinks.Async.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\Serilog.Sinks.File.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\Serilog.Sinks.RollingFile.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\EPPlus.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\EPPlus.Interfaces.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\Irony.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\XLParser.dll

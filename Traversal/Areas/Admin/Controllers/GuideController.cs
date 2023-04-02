@@ -61,14 +61,14 @@ namespace Traversal.Areas.Admin.Controllers
             }
             return View();
         }
-        [Route("EditGuide")]
+        [Route("EditGuide/{id}")]
         [HttpGet]
         public IActionResult EditGuide(int id)
         {
             var value = _guideService.TGetByID(id);
             return View(value);
         }
-        [Route("EditGuide")]
+        [Route("EditGuide/{id}")]
         [HttpPost]
         public async Task<IActionResult> EditGuide(GuideEditViewModel gm, Guide g)
         {

@@ -30,12 +30,14 @@ namespace Traversal.Areas.Admin.Controllers
             string returnUrl = Request.Headers["Referer"].ToString();
             return Redirect(returnUrl);
         }
+        [Route("EditGuest")]
         [HttpGet]
         public IActionResult EditGuest(int id)
         {
             var values = _appUserService.TGetByID(id);
             return View(values);
         }
+        [Route("EditGuest")]
         [HttpPost]
         public IActionResult EditGuest(AppUser a)
         {

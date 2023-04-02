@@ -29,11 +29,13 @@ namespace Traversal.Areas.Admin.Controllers
             return View(values);
         }
         //Addition
+        [Route("AddDestination")]
         [HttpGet]
         public IActionResult AddDestination() 
         {
             return View();
         }
+        [Route("AddDestination")]
         [HttpPost]
         public async Task<IActionResult> AddDestination(Destination d)
         {
@@ -96,12 +98,14 @@ namespace Traversal.Areas.Admin.Controllers
             return Redirect(returnUrl);
         }
         //Edition
+        [Route("EditDestination/{id}")]
         [HttpGet]
         public IActionResult EditDestination(int id)
         {
             var value = _destinationService.TGetByID(id);
             return View(value);
         }
+        [Route("EditDestination/{id}")]
         [HttpPost]
         public async Task<IActionResult> EditDestination(Destination d)
         {
