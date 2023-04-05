@@ -57,6 +57,14 @@
       "PackagePath": "staticwebassets\\MemberImages\\d9c23f2b-3492-4a51-a019-d5bf948be8e7.png"
     },
     {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\PdfReports\\dosya1.pdf",
+      "PackagePath": "staticwebassets\\PdfReports\\dosya1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\PdfReports\\dosya2.pdf",
+      "PackagePath": "staticwebassets\\PdfReports\\dosya2.pdf"
+    },
+    {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\Traversal-Liberty\\about.html",
       "PackagePath": "staticwebassets\\Traversal-Liberty\\about.html"
     },

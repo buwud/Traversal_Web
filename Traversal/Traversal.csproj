@@ -30,6 +30,7 @@
     <PackageReference Include="ClosedXML" Version="0.100.3" />
     <PackageReference Include="EPPlus" Version="6.2.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="3.3.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
@@ -57,7 +58,7 @@
     <Folder Include="Areas\Member\Data\" />
     <Folder Include="wwwroot\MemberImages\" />
     <Folder Include="wwwroot\AdminImages\" />
-    <Folder Include="wwwroot\NewFolder\" />
+    <Folder Include="wwwroot\PdfReports\" />
   </ItemGroup>
 
 </Project>

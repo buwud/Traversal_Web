@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Traversal.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
     public class DashboardController : Controller
     {
         Context c = new Context();
