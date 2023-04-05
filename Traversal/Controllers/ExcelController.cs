@@ -1,55 +1,36 @@
-﻿using ClosedXML.Excel;
+﻿using BusinessLayer.Abstract;
+using ClosedXML.Excel;
 using DataAccessLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using OfficeOpenXml;
+using System;
 using Traversal.Models;
 
 namespace Traversal.Controllers
 {
     public class ExcelController : Controller
     {
+        private readonly IExcelService _excelService;
+
+        public ExcelController(IExcelService excelService)
+        {
+            _excelService = excelService;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public List<DestinationModel> DestinationList()
-        {
-            List<DestinationModel> destinationModels = new List<DestinationModel>();
-            using(var context=new Context())
-            {
-                destinationModels = context.Destinations.Select(x => new DestinationModel
-                {
-                    City = x.City,
-                    DayNight = x.StayTime,
-                    Capacity = x.Capacity
-                }).ToList();
-
-            }
-            return destinationModels;
-        }
+        
         public IActionResult StaticExcelReport()
         {
-            ExcelPackage excelPackage = new ExcelPackage();
-            var worksheet = excelPackage.Workbook.Worksheets.Add("Page-1");
-            worksheet.Cells[1, 1].Value = "Route";
-            worksheet.Cells[1, 2].Value = "Guide";
-            worksheet.Cells[1, 3].Value = "Capacity";
-
-            worksheet.Cells[2, 1].Value = "Gürcistan-Batum";
-            worksheet.Cells[2, 2].Value = "Buse Duran";
-            worksheet.Cells[2, 3].Value = "390";
-
-            worksheet.Cells[2, 1].Value = "Sırbşstan-Makedonya";
-            worksheet.Cells[2, 2].Value = "Kaan Balcı Duran";
-            worksheet.Cells[2, 3].Value = "325";
-
-            var bytes = excelPackage.GetAsByteArray();
-            return File(bytes, "application/vnd.openxmlformants-officedocument.spreadsheetml.sheet", "File1.xlsx");
-
+            List<DestinationModel> destinationList = DestinationModel.DestinationList();
+            return File(_excelService.ExcelList(destinationList), "application/vnd.openxmlformants-officedocument.spreadsheetml.sheet", Guid.NewGuid().ToString() + ".xlsx");
         }
-        public IActionResult DestinationExcelReport()
+        public IActionResult DestinationExcelReport(DestinationModel m)
         {
+            List<DestinationModel> destinationList = DestinationModel.DestinationList();
             Guid guid = Guid.NewGuid();
             using(var workBook= new XLWorkbook())
             {
@@ -60,7 +41,7 @@ namespace Traversal.Controllers
                 workSheet.Cell(1, 4).Value = "Capacity";
 
                 int rowCount = 2;
-                foreach(var item in DestinationList())
+                foreach(var item in destinationList)
                 {
                     workSheet.Cell(rowCount, 1).Value = item.City;
                     workSheet.Cell(rowCount, 2).Value = item.DayNight;
@@ -77,5 +58,6 @@ namespace Traversal.Controllers
                 }
             }
         }
+
     }
 }

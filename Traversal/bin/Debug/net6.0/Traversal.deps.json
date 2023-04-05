@@ -3069,6 +3069,7 @@
       "BusinessLayer/1.0.0": {
         "dependencies": {
           "DataAccessLayer": "1.0.0",
+          "EPPlus": "6.2.0",
           "EntityLayer": "1.0.0",
           "FluentValidation": "11.5.1",
           "FluentValidation.AspNetCore": "11.2.2",
