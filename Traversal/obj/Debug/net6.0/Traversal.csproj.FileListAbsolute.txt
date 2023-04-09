@@ -332,3 +332,6 @@ C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\runtimes\win-arm64\n
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\MailKit.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\MimeKit.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\BouncyCastle.Crypto.dll

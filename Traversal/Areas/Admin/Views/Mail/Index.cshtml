@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h6>Add Guide Page</h6>
+<form method="post" enctype="multipart/form-data">
+    <div>
+        @Html.Label("Name - Surname")
+        <input type="text" pattern="[^\d]*" placeholder="name surname" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Photo")
+        <input type="file" placeholder="profile picture" asp-for="Image" class="form-control" />
+        <span asp-validation-for="Image" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Instagram URL")
+        <input type="url" placeholder="Price in $" asp-for="InstagramURL" class="form-control" />
+        <span asp-validation-for="InstagramURL" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Twitter URL")
+        <input type="url" placeholder="number of people can attend" asp-for="TwitterURL" class="form-control" />
+        <span asp-validation-for="TwitterURL" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Description")
+        <textarea cols="30" rows="5" placeholder="description for more info" asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
+    <br />
+    <button class="btn btn-primary" style="background-color:crimson">Save</button>
+    <br />
+</form>
