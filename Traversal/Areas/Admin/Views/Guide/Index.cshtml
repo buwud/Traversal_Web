@@ -25,6 +25,7 @@
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">About</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Edit</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete</th>
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                             </thead>
@@ -53,17 +54,18 @@
                                         </td>
                                         
                                             @{
-                                                if (item.Status)
+                                                if (item.Status==true)
                                                 {
-                                                <td class="text-center"><a href="#" class="badge badge-sm bg-gradient-danger align-middle">Disable</a></td>
+                                                <td class="text-center"><a href="/Admin/Guide/ChangeToFalse/@item.GuideID" class="badge badge-sm bg-gradient-success align-middle">Active</a></td>
                                                 }
                                                 else
                                                 {
-                                                <td class="text-center"><a href="#" class="badge badge-sm bg-gradient-success align-middle">Enable</a></td>
+                                                <td class="text-center"><a href="/Admin/Guide/ChangeToTrue/@item.GuideID" class="badge badge-sm bg-gradient-danger align-middle">Passive</a></td>
                                                 }
                                             }
                                         
-                                        <td class="text-center"><a href="/Admin/Guide/EditGuide/@item.GuideID" class="badge badge-sm bg-gradient-success align-middle">Edit</a></td>
+                                        <td class="text-center"><a href="/Admin/Guide/EditGuide/@item.GuideID" class="badge badge-sm bg-gradient-info align-middle">Edit</a></td>
+                                        <td class="text-center"><a href="/Admin/Guide/DeleteGuide/@item.GuideID" class="badge badge-sm bg-gradient-warning align-middle">Delete</a></td>
                                     </tr>
                                 }
                             </tbody>

@@ -22,6 +22,16 @@ namespace BusinessLayer.Concrete
             return _GuideDal.GetList();
         }
 
+        public void TChangeToFalseGuide(int id)
+        {
+            _GuideDal.ChangeToFalseGuide(id);
+        }
+
+        public void TChangeToTrueGuide(int id)
+        {
+            _GuideDal.ChangeToTrueGuide(id);
+        }
+
         public void TDelete(Guide t)
         {
             _GuideDal.Delete(t);

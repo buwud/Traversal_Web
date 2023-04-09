@@ -18,7 +18,6 @@ namespace Traversal.Areas.Admin.Controllers
         {
             _guideService = guideService;
         }
-        [Route("")]
         [Route("Index")]
         public IActionResult Index()
         {
@@ -97,10 +96,23 @@ namespace Traversal.Areas.Admin.Controllers
             }
             return View();
         }
-
-        public IActionResult EnableThis(int id)
+        [Route("DeleteGuide/{id}")]
+        public IActionResult DeleteGuide(int id)
         {
-
+            var value = _guideService.TGetByID(id);
+            _guideService.TDelete(value);
+            return RedirectToAction("Index");
+        }
+        [Route("ChangeToFalse/{id}")]
+        public IActionResult ChangeToFalse(int id)
+        {
+            _guideService.TChangeToFalseGuide(id);
+            return RedirectToAction("Index");
+        }
+        [Route("ChangeToTrue/{id}")]
+        public IActionResult ChangeToTrue(int id)
+        {
+            _guideService.TChangeToTrueGuide(id);
             return RedirectToAction("Index");
         }
     }

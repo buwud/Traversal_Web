@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Traversal.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
     public class GuestController : Controller
     {
         private readonly IAppUserService _appUserService;
