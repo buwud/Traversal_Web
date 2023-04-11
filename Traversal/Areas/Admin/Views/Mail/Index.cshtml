@@ -1,44 +1,30 @@
-﻿
+﻿@model Traversal.Areas.Admin.Models.MailRequest
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-
-<h6>Add Guide Page</h6>
-<form method="post" enctype="multipart/form-data">
+<h6>Mailing Page</h6>
+<form method="post">
     <div>
-        @Html.Label("Name - Surname")
-        <input type="text" pattern="[^\d]*" placeholder="name surname" asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger" style="color:crimson"></span>
+        @Html.Label("To:")
+        <input type="email" placeholder="receiver mail address" asp-for="Receiver" class="form-control" />
+        <span asp-validation-for="Receiver" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
     <div>
-        @Html.Label("Photo")
-        <input type="file" placeholder="profile picture" asp-for="Image" class="form-control" />
-        <span asp-validation-for="Image" class="text-danger" style="color:crimson"></span>
+        @Html.Label("Subject:")
+        <input type="text" placeholder="mail subject" asp-for="Subject" class="form-control" />
+        <span asp-validation-for="Subject" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
     <div>
-        @Html.Label("Instagram URL")
-        <input type="url" placeholder="Price in $" asp-for="InstagramURL" class="form-control" />
-        <span asp-validation-for="InstagramURL" class="text-danger" style="color:crimson"></span>
-    </div>
-    <br />
-    <div>
-        @Html.Label("Twitter URL")
-        <input type="url" placeholder="number of people can attend" asp-for="TwitterURL" class="form-control" />
-        <span asp-validation-for="TwitterURL" class="text-danger" style="color:crimson"></span>
-    </div>
-    <br />
-    <div>
-        @Html.Label("Description")
-        <textarea cols="30" rows="5" placeholder="description for more info" asp-for="Description" class="form-control"></textarea>
-        <span asp-validation-for="Description" class="text-danger" style="color:crimson"></span>
+        @Html.Label("Mail content:")
+        <textarea cols="30" rows="5" class="form-control" asp-for="Body"></textarea>
+        <span asp-validation-for="Body" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
     <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
     <br />
-    <button class="btn btn-primary" style="background-color:crimson">Save</button>
+    <button class="btn btn-primary" style="background-color:crimson">Send</button>
     <br />
 </form>

@@ -5,6 +5,7 @@ using Traversal.Areas.Admin.Models;
 
 namespace Traversal.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class MailController : Controller
     {
         [HttpGet]
@@ -16,17 +17,29 @@ namespace Traversal.Areas.Admin.Controllers
         public IActionResult Index(MailRequest mailRequest)
         {
             MimeMessage mimeMessage = new MimeMessage();
-            MailboxAddress mailboxAddressFrom = new MailboxAddress(mailRequest.Name,mailRequest.Sender);//kimden gönderilcek
+
+            MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin", "hegvelehugvele@gmail.com");//kimden gönderilcek
+
             mimeMessage.From.Add(mailboxAddressFrom);
+
             MailboxAddress mailboxAddressTo = new MailboxAddress("User", mailRequest.Receiver);
 
             mimeMessage.To.Add(mailboxAddressTo);
 
-            mimeMessage.Subject = mimeMessage.Subject;
+            //içerik kısmı
+            var bodyBuilder=new BodyBuilder();
+            bodyBuilder.TextBody = mailRequest.Body;
+            mimeMessage.Body = bodyBuilder.ToMessageBody();
+
+            mimeMessage.Subject = mailRequest.Subject;
+
             SmtpClient client = new SmtpClient();
-            client.Connect("smptp.gmail.com", 587, false);
-            client.Authenticate(mailRequest.Sender, "123456Bb*");
+            client.Connect("smtp.gmail.com", 587, false);
+
+            client.Authenticate("hegvelehugvele@gmail.com", "qgevuwdsgzrsolko");
+
             client.Send(mimeMessage);
+
             client.Disconnect(true);
             return View();
         }
