@@ -36,7 +36,7 @@ namespace Traversal.Areas.Admin.Controllers
             SmtpClient client = new SmtpClient();
             client.Connect("smtp.gmail.com", 587, false);
 
-            client.Authenticate("hegvelehugvele@gmail.com", "qgevuwdsgzrsolko");
+            client.Authenticate("hegvelehugvele@gmail.com", "");
 
             client.Send(mimeMessage);
 
