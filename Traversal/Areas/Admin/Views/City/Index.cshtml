@@ -4,33 +4,87 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 <h2>Şehir Ülke İşlemleri</h2>
 <br />
 <button type="button" id="btnGetList" class="btn btn-outline-info">Şehir Listesi</button>
-<br />
+
+
+<button type="button" id="btnGetByID" class="btn btn-outline-primary">Şehir Getir</button>
+
+<button type="button" id="btnAdd" class="btn btn-outline-warning">Şehir Ekle</button>
+
+<button type="button" id="btnDelete" class="btn btn-outline-danger">Şehir Sil</button>
+
+<button type="button" id="btnUpdate" class="btn btn-outline-success">Şehir Güncelle</button>
+
 <br />
 <div id="cityList">
-    buraya şehir listesi gelecek
+    <h1></h1>
+</div>
+<div >
+    <input type="text" itemid="txtCity" placeholder="Enter city name" class="form-control" />
+    <br />
+    <input type="text" itemid="txtStayTime" placeholder="Enter the duration of the tour" class="form-control" />
+    <br />
+    <input type="number" itemid="txtPrice" placeholder="Enter the price" class="form-control" />
+    <br />
+    <input type="number" itemid="txtCapacity" placeholder="Enter the capacity of the tour" class="form-control" />
 </div>
 
 <script>
     $("#btnGetList").click(function () {
+        getList(); // Call the getList() function to fetch and populate the table
+    });
+
+    function getList() {
         $.ajax({
             contentType: "application/json",
             dataType: "json",
             type: "Get",
-            url: "/Admin/City/CityList/",
+            url: "/Admin/City/DesList/",
             success: function (func) {
                 let w = jQuery.parseJSON(func);
                 console.log(w);
-                let tablehtml = "<table class=table table-bordered> <tr><th> Şehir Adı </th> <th> Gün-Gece </th> <th> Fiyatı </th> </tr>";
+                let tablehtml =
+                    '<table class="table table-bordered"> <tr><th> Şehir Adı </th> <th> Gün-Gece </th> <th> Fiyatı </th> </tr>';
                 $.each(w, (index, value) => {
-                    tablehtml += `<tr><td>${value.CityID}</td> <td>${value.CityName}</td> <td> ${value.CityCountry} ₺ </td> </tr>`
+                    tablehtml += `<tr><td>${value.City}</td> <td>${value.StayTime}</td> <td> ${value.Price} $ </td> </tr>`;
                 });
                 tablehtml += "</table>";
                 $("#cityList").html(tablehtml);
+
+                let refreshButton = '<button type="button" id="btnRefreshTable" class="btn btn-outline-info">Güncelle</button>';
+                // Replace the "Get List" button with a "Refresh" button
+                $("#btnGetList").replaceWith(refreshButton);
+
+                // Attach click event handler to the new "Refresh" button
+                $("#btnRefreshTable").click(function () {
+                    getList(); // Call the getList() function to refresh the table
+                });
+            },
+        });
+    }
+
+    $("#btnAdd").click(function () {
+        let cityValues={
+            City:$("#txtCity").val(),
+            StayTime:$("#txtStayTime").val(),
+            Price: $("#txtPrice").val(),
+            Capacity: $("#txtCapacity").val()
+        };
+
+        $.ajax({
+            type:"post",
+            url:"/Admin/City/AddDes/",
+            data:cityValues,
+            success:function(func){
+                let result=jQuery.parseJSON(func);
+                alert("Added Successfully!");
             }
         });
     });
+        
 
 </script>

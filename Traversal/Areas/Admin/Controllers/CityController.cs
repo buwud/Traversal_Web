@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Abstract;
+using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Traversal.Models;
 
@@ -7,37 +9,26 @@ namespace Traversal.Areas.Admin.Controllers
     [Area("Admin")]
     public class CityController : Controller
     {
+        private readonly IDestinationService _destinationService;
+        public CityController(IDestinationService destinationService)
+        {
+            _destinationService = destinationService;
+        }
         public IActionResult Index()
         {
             return View();
         }
-        
-        public IActionResult CityList()
+        [HttpPost]
+        public IActionResult AddDes(Destination destination)
         {
-            var jsonCity = JsonConvert.SerializeObject(CityClasses);
+            _destinationService.TInsert(destination);
+            var values = JsonConvert.SerializeObject(destination);
+            return Json(values);
+        }
+        public IActionResult DesList()
+        {
+            var jsonCity = JsonConvert.SerializeObject(_destinationService.GetList());
             return Json(jsonCity);
         }
-
-        public static List<CityClass> CityClasses = new List<CityClass>()
-        {
-            new CityClass
-            {
-                CityID=1,
-                CityName="Kayseri",
-                CityCountry="Türkiye"
-            },
-            new CityClass
-            {
-                CityID=2,
-                CityName="Roma",
-                CityCountry="Italy"
-            },
-            new CityClass
-            {
-                CityID=2,
-                CityName="Londra",
-                CityCountry="England"
-            },
-        };
     }
 }
