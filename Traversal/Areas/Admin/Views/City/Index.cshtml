@@ -10,8 +10,7 @@
 <br />
 <button type="button" id="btnGetList" class="btn btn-outline-info">Şehir Listesi</button>
 
-
-<button type="button" id="btnGetByID" class="btn btn-outline-primary">Şehir Getir</button>
+<button type="button" id="btnGetBy" class="btn btn-outline-primary">Şehir Getir</button>
 
 <button type="button" id="btnAdd" class="btn btn-outline-warning">Şehir Ekle</button>
 
@@ -23,6 +22,15 @@
 <div id="cityList">
     <h1></h1>
 </div>
+<br />
+<div>
+    <input type="text" id="txtID" placeholder="Enter city-ID value" class="form-control" />
+</div>
+<br />
+<div id="destinationListByID">
+
+</div>
+<br />
 <div >
     <input type="text" itemid="txtCity" placeholder="Enter city name" class="form-control" />
     <br />
@@ -34,6 +42,7 @@
 </div>
 
 <script>
+    //DisplayList
     $("#btnGetList").click(function () {
         getList(); // Call the getList() function to fetch and populate the table
     });
@@ -66,7 +75,9 @@
             },
         });
     }
+    //DisplayList-End
 
+    //Adding
     $("#btnAdd").click(function () {
         let cityValues={
             City:$("#txtCity").val(),
@@ -85,6 +96,36 @@
             }
         });
     });
-        
+    //Adding-End
 
+    //GetByID
+    $("#btnGetBy").click(x=>{
+        let id=$("#txtID").val();
+
+        $.ajax({
+            contentType:"application/json",
+            dataType:"json",
+            type:"Get",
+            url:"/Admin/City/GetByID/",
+            data: { DestinationID:id },
+            success:function(func2){
+            let result=jQuery.parseJSON(func2);
+            console.log(result);
+                let htmlStr = `<table class=table table-bordered><tr><th>City</th><th>Duration</th><th>Price</th></tr><tr><td>${result.City}</td><td>${result.StayTime}</td><td>${result.Price}</td></tr></table>`;
+                $("#destinationListByID").html(htmlStr);
+            },
+            error: function(xhr,status,error){
+                if(xhr.status == 404){
+                    let errorMessage = "No element found with the specified ID.";
+                    $("#destinationListByID").html(errorMessage);
+                }
+                else{
+                    let errorMessage = "An error occured with retrieving data.";
+                    $("#destinationListByID").html(errorMessage);
+                }
+                console.log("An error occured ",error);//Error vermiyo
+            }
+        })
+    })
+    //GetByID-End
 </script>

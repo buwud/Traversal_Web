@@ -30,5 +30,10 @@ namespace Traversal.Areas.Admin.Controllers
             var jsonCity = JsonConvert.SerializeObject(_destinationService.GetList());
             return Json(jsonCity);
         }
+        public IActionResult GetByID(int DestinationID)
+        {
+            var values = _destinationService.TGetByID(DestinationID); 
+            return Json(JsonConvert.SerializeObject(values));
+        }
     }
 }
