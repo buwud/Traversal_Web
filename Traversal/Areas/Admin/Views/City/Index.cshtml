@@ -8,38 +8,63 @@
 
 <h2>Şehir Ülke İşlemleri</h2>
 <br />
-<button type="button" id="btnGetList" class="btn btn-outline-info">Şehir Listesi</button>
-
-<button type="button" id="btnGetBy" class="btn btn-outline-primary">Şehir Getir</button>
-
-<button type="button" id="btnAdd" class="btn btn-outline-warning">Şehir Ekle</button>
-
-<button type="button" id="btnDelete" class="btn btn-outline-danger">Şehir Sil</button>
-
-<button type="button" id="btnUpdate" class="btn btn-outline-success">Şehir Güncelle</button>
-
+@*Buttons*@
+<button type="button" id="btnGetList" class="btn btn-outline-info">City List</button>
 <br />
+
 <div id="cityList">
     <h1></h1>
 </div>
 <br />
-<div>
-    <input type="text" id="txtID" placeholder="Enter city-ID value" class="form-control" />
-</div>
-<br />
-<div id="destinationListByID">
 
+<div>
+    <input type="text" id="txtID" placeholder="enter ID for searching" class="form-control" />
 </div>
 <br />
-<div >
-    <input type="text" itemid="txtCity" placeholder="Enter city name" class="form-control" />
+<button type="button" id="btnGetBy" class="btn btn-outline-primary">Search</button>
+<br />
+<div id="destinationListByID"></div>
+<br />
+@*insertion-form*@
+<div>
+    <input type="text" id="txtCity" placeholder="Enter city name" class="form-control" />
     <br />
-    <input type="text" itemid="txtStayTime" placeholder="Enter the duration of the tour" class="form-control" />
+    <input type="text" id="txtStayTime" placeholder="Enter the duration of the tour" class="form-control" />
     <br />
-    <input type="number" itemid="txtPrice" placeholder="Enter the price" class="form-control" />
+    <input type="number" id="txtPrice" placeholder="Enter the price" class="form-control" />
     <br />
-    <input type="number" itemid="txtCapacity" placeholder="Enter the capacity of the tour" class="form-control" />
+    <input type="number" id="txtCapacity" placeholder="Enter the capacity of the tour" class="form-control" />
 </div>
+<br />
+<button type="button" id="btnAdd" class="btn btn-outline-warning" style="color:chocolate">Add City</button>
+@*insertion-form-END*@
+<br />
+@*edit-form*@
+<div>
+    <input type="number" id="txtcityEditID" placeholder="enter ID you want to update it" class="form-control" />
+    <br />
+    <input type="text" id="txtStayTimeEdit" placeholder="Enter the duration of the tour" class="form-control" />
+    <br />
+    <input type="number" id="txtPriceEdit" placeholder="Enter the price" class="form-control" />
+    <br />
+    <input type="number" id="txtCapacityEdit" placeholder="Enter the capacity of the tour" class="form-control" />
+</div>
+<br />
+<button type="button" id="btnUpdate" class="btn btn-outline-success">Update</button>
+<div id="destinationEditInfo"></div>
+@*edit-form-END*@
+<br />
+@*delete-form*@
+<div>
+    <input type="text" id="txtcityID" placeholder="enter ID to delete" class="form-control" />
+</div>
+<br />
+<button type="button" id="btnDelete" class="btn btn-outline-danger">Delete</button>
+<br />
+<div id="destinationDeleteInfo"></div>
+@*delete-form-END*@
+<br />
+@*Buttons-End*@
 
 <script>
     //DisplayList
@@ -57,9 +82,9 @@
                 let w = jQuery.parseJSON(func);
                 console.log(w);
                 let tablehtml =
-                    '<table class="table table-bordered"> <tr><th> Şehir Adı </th> <th> Gün-Gece </th> <th> Fiyatı </th> </tr>';
+                    '<table class="table table-bordered"> <tr><th> ID </th><th> City Name </th> <th> Duration </th> <th> Price </th> </tr>';
                 $.each(w, (index, value) => {
-                    tablehtml += `<tr><td>${value.City}</td> <td>${value.StayTime}</td> <td> ${value.Price} $ </td> </tr>`;
+                    tablehtml += `<tr><td>${value.DestinationID}</td><td>${value.City}</td> <td>${value.StayTime}</td> <td> ${value.Price} $ </td> </tr>`;
                 });
                 tablehtml += "</table>";
                 $("#cityList").html(tablehtml);
@@ -80,6 +105,7 @@
     //Adding
     $("#btnAdd").click(function () {
         let cityValues={
+            DestinationID:$("txtID").val(),
             City:$("#txtCity").val(),
             StayTime:$("#txtStayTime").val(),
             Price: $("#txtPrice").val(),
@@ -99,33 +125,94 @@
     //Adding-End
 
     //GetByID
-    $("#btnGetBy").click(x=>{
-        let id=$("#txtID").val();
+    $("#btnGetBy").click(x => {
+        let id = $("#txtID").val();
 
-        $.ajax({
-            contentType:"application/json",
-            dataType:"json",
-            type:"Get",
-            url:"/Admin/City/GetByID/",
-            data: { DestinationID:id },
-            success:function(func2){
-            let result=jQuery.parseJSON(func2);
-            console.log(result);
+    $.ajax({
+        contentType: "application/json",
+        dataType: "json",
+        type: "Get",
+        url: "/Admin/City/GetByID/",
+        data: { DestinationID: id },
+        success: function (func2) {
+            let result = jQuery.parseJSON(func2);
+                console.log(result);
+            if(result!=null)
+            {
                 let htmlStr = `<table class=table table-bordered><tr><th>City</th><th>Duration</th><th>Price</th></tr><tr><td>${result.City}</td><td>${result.StayTime}</td><td>${result.Price}</td></tr></table>`;
                 $("#destinationListByID").html(htmlStr);
-            },
-            error: function(xhr,status,error){
-                if(xhr.status == 404){
-                    let errorMessage = "No element found with the specified ID.";
+             }
+             else{
+                 let errorMessage="No element found with the specified ID.";
                     $("#destinationListByID").html(errorMessage);
-                }
-                else{
-                    let errorMessage = "An error occured with retrieving data.";
-                    $("#destinationListByID").html(errorMessage);
-                }
-                console.log("An error occured ",error);//Error vermiyo
+             }
+        },
+        error: function (xhr, status, error) {
+            if (xhr.status == 404) {
+                let errorMessage = "No element found with the specified ID.";
+                $("#destinationListByID").html(errorMessage);
+            } else {
+                let errorMessage = "An error occurred with retrieving data.";
+                $("#destinationListByID").html(errorMessage);
             }
-        })
-    })
+            console.log("An error occurred ", error);
+        }
+        });
+    });
     //GetByID-End
+
+    //Delete
+    $("#btnDelete").click(x => {
+        let id = $("#txtcityID").val();
+        let errorMessage="";
+        $.ajax({
+            url: "/Admin/City/DeleteCity/"+id,
+            type:"post",
+            contentType:"application/json",
+            dataType:"json",
+            success:function(func3){
+                alert("Deleted Successfully");
+            },
+            error:function(xhr,status,error){
+                if (xhr.status == 404) {
+                    errorMessage = "No element found with the specified ID.";
+                    $("#destinationDeleteInfo").html(errorMessage);
+                } else {
+                    errorMessage = "An error occurred with retrieving data.";
+                    $("#destinationDeleteInfo").html(errorMessage);
+                }
+                console.log("An error occurred ", error);
+            }
+        });
+    });
+    //Delete-End
+
+    //Update
+    $("#btnUpdate").click(function(){
+        let values={
+            DestinationID: $("#txtcityEditID").val(),
+            Price: $("#txtPriceEdit").val(),
+            StayTime: $("#txtStayTimeEdit").val(),
+            Capacity:$("#txtCapacityEdit").val(),
+        }
+        $.ajax({
+            type:"post",
+            url:"/Admin/City/UpdateCity/",
+            data:values,
+            success:function(func4){
+                alert("Updated Successfully");
+            },
+                error: function (xhr, status, error) {
+                if (xhr.status == 404) {
+                    errorMessage = "No element found with the specified ID.";
+                    $("#destinationEditInfo").html(errorMessage);
+                }
+                else {
+                 errorMessage = "An error occurred with retrieving data.";
+                 $("#destinationEditInfo").html(errorMessage);
+            }
+             console.log("An error occurred ", error);
+            }
+        });
+    });
 </script>

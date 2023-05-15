@@ -35,5 +35,29 @@ namespace Traversal.Areas.Admin.Controllers
             var values = _destinationService.TGetByID(DestinationID); 
             return Json(JsonConvert.SerializeObject(values));
         }
+        public IActionResult DeleteCity(int id)
+        {
+            var value = _destinationService.TGetByID(id);
+            _destinationService.TDelete(value);
+            return NoContent();
+        }
+
+        public IActionResult UpdateCity(Destination d)
+        {
+            var value = _destinationService.TGetByID(d.DestinationID);
+
+            d.Status = value.Status;
+            d.City=value.City;
+            d.Description = value.Description;
+            d.Details = value.Details;
+            d.Details1 = value.Details1;
+            d.CoverImage = value.CoverImage;
+            d.Image1 = value.Image1;
+            d.Image1S = value.Image1S;
+
+            _destinationService.TUpdate(d);
+            var values = JsonConvert.SerializeObject(value);
+            return Json(values);
+        }
     }
 }
