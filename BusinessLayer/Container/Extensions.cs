@@ -30,6 +30,9 @@ namespace BusinessLayer.Container
             serviceDescriptors.AddScoped<IGuideService, GuideManager>();
             serviceDescriptors.AddScoped<IGuideDal, EfGuideDal>();
 
+            serviceDescriptors.AddScoped<IContactUsService, ContactUsManager>();
+            serviceDescriptors.AddScoped<IContactUsDal, EfContactUsDal>();
+
             serviceDescriptors.AddScoped<IExcelService, ExcelManager>();
         }
     }
