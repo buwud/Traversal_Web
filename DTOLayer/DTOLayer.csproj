@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\CityDTOs\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
   </ItemGroup>
 

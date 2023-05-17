@@ -78,6 +78,28 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("AboutCares");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.Announcement", b =>
+                {
+                    b.Property<int>("AnnouncementID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnnouncementID"));
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AnnouncementID");
+
+                    b.ToTable("Announcements");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.AppRole", b =>
                 {
                     b.Property<int>("Id")
