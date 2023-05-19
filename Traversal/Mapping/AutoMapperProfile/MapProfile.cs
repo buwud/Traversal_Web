@@ -2,26 +2,26 @@
 using DTOLayer.DTOs.AnnouncementDTOs;
 using DTOLayer.DTOs.AppUserDTOs;
 using DTOLayer.DTOs.DestinationDTOs;
-using DTOLayer.DTOs.MailDTOs;
 using EntityLayer.Concrete;
 
 namespace Traversal.Mapping.AutoMapperProfile
 {
     public class MapProfile : Profile
     {
-        protected MapProfile()
+        public MapProfile()
         {
-            CreateMap<AnnouncementAddDTOs, Announcement>();
-            CreateMap<Announcement, AnnouncementAddDTOs>();
+            CreateMap<AnnouncementAddValidatorDTO, Announcement>().ReverseMap();
 
-            CreateMap<AppUserLoginDTOs, AppUser>();
-            CreateMap<AppUser, AppUserLoginDTOs>();
+            CreateMap<AppUserLoginDTO, AppUser>().ReverseMap();
 
-            CreateMap<AppUserRegisterDTOs, AppUser>();
-            CreateMap<AppUser, AppUserRegisterDTOs>();
+            CreateMap<AppUserRegisterDTO, AppUser>().ReverseMap();
 
-            CreateMap<DestinationAddDTOs,Destination>();
-            CreateMap<Destination, DestinationAddDTOs>();
+            CreateMap<DestinationAddDTO,Destination>().ReverseMap();
+
+            CreateMap<AnnouncementListDTO, Announcement>().ReverseMap();
+
+            CreateMap<AnnouncementUpdateDTO,Announcement>().ReverseMap();
+  
         }
     }
 }

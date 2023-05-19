@@ -1,20 +1,13 @@
-﻿using BusinessLayer.Abstract;
-using BusinessLayer.Concrete;
-using BusinessLayer.Container;
+﻿using BusinessLayer.Container;
 using BusinessLayer.Validations;
-using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
-using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Features;
-using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.AspNetCore.Mvc.Authorization;
-using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,11 +32,15 @@ builder.Services.ContainerDependencies();
 
 builder.Services.AddHttpClient();
 
-//builder.Services.AddAutoMapper(typeof(Startup));
+//AUTO-MAPPER
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.CustomValidator();
+
 
 //builder.Services.CustomerValidator();
 
 //builder.Services.AddControllersWithViews().AddFluentValidation();
+builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
 
 builder.Services.AddMvc(Config =>
 {

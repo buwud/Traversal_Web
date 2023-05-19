@@ -351,3 +351,5 @@ C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\System.Web.WebPages.
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\DTOLayer.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\DTOLayer.pdb
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
