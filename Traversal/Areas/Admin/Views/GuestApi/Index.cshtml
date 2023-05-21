@@ -1,0 +1,74 @@
+﻿@model List<GuestApiViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int counter = 0;
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>API Guest List</h6>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Surname</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">City</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Country</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Edit</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete</th>
+                                    <th class="text-secondary opacity-7"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    counter++;
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@counter</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">@item.Name</span>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Surname</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.City</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Country</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Mail</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <a href="/Admin/GuestApi/UpdateGuest/@item.GuestID" class="badge badge-sm bg-gradient-danger">Edit</a>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <a href="/Admin/GuestApi/DeleteGuest/@item.GuestID" class="badge badge-sm bg-gradient-success">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <a href="/Admin/GuestApi/AddGuest/" class="badge badge-sm bg-gradient-primary">Add More</a>
+            </div>
+        </div>
+    </div>
+</div>
