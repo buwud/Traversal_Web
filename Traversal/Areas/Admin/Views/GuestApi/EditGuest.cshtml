@@ -1,0 +1,45 @@
+﻿@model GuestApiViewModel
+@{
+    ViewData["Title"] = "EditGuest";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h6>Edit Guest with API</h6>
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="GuestID" />
+    <div>
+        @Html.Label("Name")
+        <input type="text" pattern="[^\d]*" placeholder="write title" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Surname")
+        <input type="text" placeholder="write content" asp-for="Surname" class="form-control" />
+        <span asp-validation-for="Surname" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("City")
+        <input type="text" placeholder="write content" asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Country")
+        <input type="text" placeholder="write content" asp-for="Country" class="form-control" />
+        <span asp-validation-for="Country" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div>
+        @Html.Label("Mail")
+        <input type="text" placeholder="write content" asp-for="Mail" class="form-control" />
+        <span asp-validation-for="Mail" class="text-danger" style="color:crimson"></span>
+    </div>
+    <br />
+    <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
+    <br />
+    <button class="btn btn-primary" style="background-color:crimson">Update</button>
+    <br />
+</form>
+
