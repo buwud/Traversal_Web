@@ -20,7 +20,7 @@ namespace Traversal.Areas.Admin.Controllers
 				RequestUri = new Uri("https://imdb-top-100-movies1.p.rapidapi.com/"),
 				Headers =
 	{
-		{ "X-RapidAPI-Key", "60a34c30e5msh48eebb101f4d624p1f8af9jsn8f9ae77c7d41" },
+		
 		{ "X-RapidAPI-Host", "imdb-top-100-movies1.p.rapidapi.com" },
 	},
 			};
