@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Traversal.CQRS.Handlers.DestinationHandlers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IValidator<Reservation>, NewReservationValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<NewReservationValidator>();
+
+builder.Services.AddScoped<GetAllDestinationQueryHandler>();
 
 //LOGLAMA 
 builder.Services.AddLogging(x =>
