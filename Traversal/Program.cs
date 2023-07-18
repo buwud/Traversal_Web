@@ -4,6 +4,7 @@ using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Features;
@@ -19,6 +20,8 @@ builder.Services.AddScoped<IValidator<Reservation>, NewReservationValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<NewReservationValidator>();
 
 builder.Services.AddScoped<GetAllDestinationQueryHandler>();
+
+builder.Services.AddMediatR(typeof(Program));
 
 //LOGLAMA 
 builder.Services.AddLogging(x =>

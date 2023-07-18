@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1X3WsGSCeeNx90b8bcR8FNj/ZlKV/KzzQyrQMBh+boyP7dQtSU/jrDypgVoBvxaywL+Y+hSboNnWNqF5aF2k1w==",
+  "dgSpecHash": "yVz4MRtdJURabP3nQ2x7icQmG9adNzs5W5CCgbSu0maVYwvczCU6po7Hd+HMm2G+mULeKbK9vsp4JMINtXpQsw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\Traversal.csproj",
   "expectedPackageFiles": [
@@ -72,6 +72,9 @@
     "C:\\Users\\yeolb\\.nuget\\packages\\itextsharp.lgplv2.core\\3.3.3\\itextsharp.lgplv2.core.3.3.3.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\jquery\\3.6.4\\jquery.3.6.4.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\mailkit\\3.6.0\\mailkit.3.6.0.nupkg.sha512",
+    "C:\\Users\\yeolb\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\yeolb\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\yeolb\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\yeolb\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",

@@ -331,3 +331,6 @@ C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\vi\Humanizer.resourc
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\zh-CN\Humanizer.resources.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\zh-Hans\Humanizer.resources.dll
 C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\zh-Hant\Humanizer.resources.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\MediatR.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\yeolb\Desktop\Traversal\Traversal\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
