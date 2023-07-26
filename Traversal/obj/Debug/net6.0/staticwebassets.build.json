@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l8Xn5UyJc7+0jlTlpyYjY3HDZKzJ04M+056hbZUcIHk=",
+  "Hash": "LAJR94vMclVFEcwRgJ5F42wVSZ1w+360hA/7ziDoqXo=",
   "Source": "Traversal",
   "BasePath": "_content/Traversal",
   "Mode": "Default",
@@ -153,6 +153,40 @@
       "OriginalItemSpec": "wwwroot\\AdminImages\\5c2e5924-34a0-4498-998c-c2424d33803f.png"
     },
     {
+      "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\AdminImages\\6d3a118e-0783-4db4-864d-d88cecd3270d.jpg",
+      "SourceId": "Traversal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\",
+      "BasePath": "_content/Traversal",
+      "RelativePath": "AdminImages/6d3a118e-0783-4db4-864d-d88cecd3270d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AdminImages\\6d3a118e-0783-4db4-864d-d88cecd3270d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\AdminImages\\8cd58111-0880-41e6-a596-38389327e234.jpg",
+      "SourceId": "Traversal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\",
+      "BasePath": "_content/Traversal",
+      "RelativePath": "AdminImages/8cd58111-0880-41e6-a596-38389327e234.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AdminImages\\8cd58111-0880-41e6-a596-38389327e234.jpg"
+    },
+    {
       "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\AdminImages\\8f73a4fb-b9da-4756-b4a2-7561e51b6985.png",
       "SourceId": "Traversal",
       "SourceType": "Discovered",
@@ -219,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AdminImages\\b6527c9f-e8d9-4c9b-81ad-4da6b897138d.png"
+    },
+    {
+      "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\AdminImages\\bab760a0-b271-4a25-bc62-98c8dc3b50ff.jpeg",
+      "SourceId": "Traversal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\",
+      "BasePath": "_content/Traversal",
+      "RelativePath": "AdminImages/bab760a0-b271-4a25-bc62-98c8dc3b50ff.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AdminImages\\bab760a0-b271-4a25-bc62-98c8dc3b50ff.jpeg"
     },
     {
       "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\AdminImages\\cad39374-9ea6-4ca3-a24f-eac554f95073.png",
@@ -2225,6 +2276,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\DestinationImages\\seoul.jpeg",
+      "SourceId": "Traversal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\",
+      "BasePath": "_content/Traversal",
+      "RelativePath": "DestinationImages/seoul.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DestinationImages\\seoul.jpeg"
     },
     {
       "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\favicon.ico",

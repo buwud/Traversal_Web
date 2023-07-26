@@ -12,7 +12,7 @@ using NuGet.Protocol;
 namespace Traversal.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Route("Admin/Destination")]
     //[Route("Admin/[controller]/[action]")]
     public class DestinationController : Controller
     {
@@ -22,7 +22,7 @@ namespace Traversal.Areas.Admin.Controllers
         {
             _destinationService = destinationService;
         }
-
+        [Route("Index")]
         public IActionResult Index()
         {
             var values = _destinationService.GetList();
@@ -109,7 +109,28 @@ namespace Traversal.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> EditDestination(Destination d)
         {
+            if (!ModelState.IsValid)
+            {
+                foreach (var key in ModelState.Keys)
+                {
+                    var errors = ModelState[key].Errors;
+                    foreach (var error in errors)
+                    {
+                        var errorMessage = error.ErrorMessage;
+                    }
+                }
+                return View(d);
+            }
             var value = _destinationService.TGetByID(d.DestinationID);
+            value.StayTime = d.StayTime;
+            value.City = d.City;
+            value.Price = d.Price;
+            value.Description = d.Description;
+            value.Capacity = d.Capacity;
+            value.Status = d.Status;
+            value.Details = d.Details;
+            value.Details1 = d.Details1;
+
 
             if (d.Image != null)
             {
