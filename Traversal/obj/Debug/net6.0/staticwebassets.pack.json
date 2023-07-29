@@ -137,10 +137,6 @@
       "PackagePath": "staticwebassets\\AdminImages\\f87dc769-e08c-45e1-9d31-b2bf05cdf96a.png"
     },
     {
-      "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\DestinationImages\\seoul.jpeg",
-      "PackagePath": "staticwebassets\\DestinationImages\\seoul.jpeg"
-    },
-    {
       "Id": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\MemberImages\\d9c23f2b-3492-4a51-a019-d5bf948be8e7.png",
       "PackagePath": "staticwebassets\\MemberImages\\d9c23f2b-3492-4a51-a019-d5bf948be8e7.png"
     },

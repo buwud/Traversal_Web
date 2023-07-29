@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L4D21cmS5x3AQ+3oK203Fyljpww6MNy4a5ZvPAOXPGQ=",
+  "Hash": "PhPut9VkELvyagUhcE6OzGEstM71YH3f4ySeM7tsuEI=",
   "Source": "Traversal",
   "BasePath": "_content/Traversal",
   "Mode": "Default",
@@ -2582,23 +2582,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\DestinationImages\\seoul.jpeg",
-      "SourceId": "Traversal",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\",
-      "BasePath": "_content/Traversal",
-      "RelativePath": "DestinationImages/seoul.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\DestinationImages\\seoul.jpeg"
     },
     {
       "Identity": "C:\\Users\\yeolb\\Desktop\\Traversal\\Traversal\\wwwroot\\favicon.ico",

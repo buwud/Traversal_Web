@@ -13,7 +13,6 @@ namespace Traversal.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/Destination")]
-    //[Route("Admin/[controller]/[action]")]
     public class DestinationController : Controller
     {
         private readonly IDestinationService _destinationService;

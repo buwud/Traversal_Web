@@ -1,9 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using BusinessLayer.Validations;
 using EntityLayer.Concrete;
-using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Traversal.Areas.Admin.Models;
 
 namespace Traversal.Areas.Admin.Controllers
@@ -13,11 +11,14 @@ namespace Traversal.Areas.Admin.Controllers
     public class GuideController : Controller
     {
         private readonly IGuideService _guideService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public GuideController(IGuideService guideService)
+        public GuideController(IGuideService guideService, IWebHostEnvironment webHostEnvironment)
         {
             _guideService = guideService;
+            _webHostEnvironment = webHostEnvironment;
         }
+
         [Route("Index")]
         public IActionResult Index()
         {
@@ -33,23 +34,17 @@ namespace Traversal.Areas.Admin.Controllers
         }
         [Route("AddGuide")]
         [HttpPost]  
-        public async Task<IActionResult> AddGuide(GuideEditViewModel gm, Guide g)
+        public async Task<IActionResult> AddGuide(IFormFile image, Guide g)
         {
-            var guideModel = new GuideEditViewModel();
-
-            guideModel.Name = g.Name;
-            guideModel.TwitterURL = g.TwitterURL;
-            guideModel.InstagramURL = g.InstagramURL;
-            guideModel.ImageURL = g.Image;
-
-            if (guideModel.Image != null)
+            if (image != null)
             {
-                var resource = Directory.GetCurrentDirectory();
-                var extension = Path.GetExtension(guideModel.Image.FileName);
-                var imageName = Guid.NewGuid() + extension;
-                var saveLocation = resource + "/wwwroot/MemberImages/" + imageName;
-                var stream = new FileStream(saveLocation, FileMode.Create);
-                await guideModel.Image.CopyToAsync(stream);
+                var extension = Path.GetExtension(image.FileName);
+                var imageName = Guid.NewGuid().ToString() + extension;
+                var saveLocation = Path.Combine(_webHostEnvironment.WebRootPath, "MemberImages", imageName);
+                using (var stream = new FileStream(saveLocation, FileMode.Create))
+                {
+                    await image.CopyToAsync(stream);
+                }
                 g.Image = imageName;
             }
             if (ModelState.IsValid)
@@ -69,29 +64,23 @@ namespace Traversal.Areas.Admin.Controllers
         }
         [Route("EditGuide/{id}")]
         [HttpPost]
-        public async Task<IActionResult> EditGuide(GuideEditViewModel gm, Guide g)
+        public async Task<IActionResult> EditGuide(Guide g, IFormFile image)
         {
-            var guideModel = new GuideEditViewModel();
-
-            guideModel.Name = g.Name;
-            guideModel.TwitterURL = g.TwitterURL;
-            guideModel.InstagramURL = g.InstagramURL;
-            guideModel.ImageURL = g.Image;
-
-            if (guideModel.Image != null)
+            if (image != null)
             {
-                var resource = Directory.GetCurrentDirectory();
-                var extension = Path.GetExtension(guideModel.Image.FileName);
-                var imageName = Guid.NewGuid() + extension;
-                var saveLocation = resource + "/wwwroot/MemberImages/" + imageName;
-                var stream = new FileStream(saveLocation, FileMode.Create);
-                await guideModel.Image.CopyToAsync(stream);
+                var extension = Path.GetExtension(image.FileName);
+                var imageName = Guid.NewGuid().ToString() + extension;
+                var saveLocation = Path.Combine(_webHostEnvironment.WebRootPath, "MemberImages", imageName);
+                using (var stream = new FileStream(saveLocation, FileMode.Create))
+                {
+                    await image.CopyToAsync(stream);
+                }
                 g.Image = imageName;
             }
             if (ModelState.IsValid)
             {
                 g.Status = true;
-                _guideService.TInsert(g);
+                _guideService.TUpdate(g);
                 return RedirectToAction("Index");
             }
             return View();

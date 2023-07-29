@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h6>Add Guide Page</h6>
+<h6>Edit Guide Page</h6>
 <form method="post" enctype="multipart/form-data">
     <input type="hidden" asp-for="GuideID" />
     <div>
@@ -22,7 +22,7 @@
     <br />
     <div>
         @Html.Label("Instagram URL")
-        <input type="number" placeholder="Price in $" asp-for="InstagramURL" class="form-control" />
+        <input type="number" placeholder="your instagram account" asp-for="InstagramURL" class="form-control" />
         <span asp-validation-for="InstagramURL" class="text-danger" style="color:crimson"></span>
     </div>
     <br />
@@ -40,6 +40,6 @@
     <br />
     <div class="text-danger" asp-validation-summary="ModelOnly" style="color:crimson"></div>
     <br />
-    <button class="btn btn-primary" style="background-color:crimson">Save</button>
+    <button class="btn btn-primary" style="background-color:crimson">Save Updates</button>
     <br />
 </form>
