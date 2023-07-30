@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using Microsoft.AspNetCore.Mvc;
+using Traversal.Areas.Admin.Models;
 
 namespace Traversal.ViewComponents.Destination
 {
@@ -15,8 +16,18 @@ namespace Traversal.ViewComponents.Destination
         public IViewComponentResult Invoke()
         {
             Random rand=new Random();   
-            var value = _guideService.TGetByID(rand.Next(0,_guideService.GetList().Count-1));
-            return View(value);
+            var valueEntity = _guideService.GetList()[rand.Next(0,_guideService.GetList().Count)];
+
+            var valueModel = new GuideEditViewModel
+            {
+                ImageURL = "/MemberImages/"+ valueEntity.Image,
+                Name = valueEntity.Name,
+                TwitterURL = valueEntity.TwitterURL,
+                InstagramURL = valueEntity.InstagramURL
+            };
+
+
+            return View(valueModel);
         }
     }
 }

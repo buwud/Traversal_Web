@@ -64,21 +64,26 @@ namespace Traversal.Areas.Admin.Controllers
         }
         [Route("EditGuide/{id}")]
         [HttpPost]
-        public async Task<IActionResult> EditGuide(Guide g, IFormFile image)
+        public async Task<IActionResult> EditGuide(Guide g, IFormFile? image)
         {
+            var value = _guideService.TGetByID(g.GuideID);
+
+            
             if (image != null)
             {
-                var extension = Path.GetExtension(image.FileName);
+                var extension = Path.GetExtension(image?.FileName);
                 var imageName = Guid.NewGuid().ToString() + extension;
                 var saveLocation = Path.Combine(_webHostEnvironment.WebRootPath, "MemberImages", imageName);
                 using (var stream = new FileStream(saveLocation, FileMode.Create))
                 {
                     await image.CopyToAsync(stream);
                 }
-                g.Image = imageName;
+                value.Image = imageName;
             }
+                
             if (ModelState.IsValid)
             {
+                g.Image = value.Image;
                 g.Status = true;
                 _guideService.TUpdate(g);
                 return RedirectToAction("Index");

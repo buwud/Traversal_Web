@@ -11,7 +11,7 @@ namespace Traversal.Areas.Admin.Models
         [StringLength(500)]
         public string? Name { get; set; }
 
-        public string? ImageURL { get; set; }
+        public string ImageURL { get; set; }
         public IFormFile? Image { get; set; }
 
         [Required]
