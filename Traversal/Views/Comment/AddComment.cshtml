@@ -6,20 +6,10 @@
         Your email address will not be published. Required fields are marked *
     </p>
     <form method="post" asp-action="AddComment" asp-controller="Comment">
-
+        <input type="hidden" name="DestinationId" value="@ViewBag.destId" />
         <div class="form-group">
             <textarea name="CommentContent" class="form-control" placeholder="Your Comment*" required=""
                       spellcheck="false"></textarea>
-        </div>
-        <div class="input-grids row">
-
-            <div class="form-group col-lg-6">
-                <input type="text" name="CommentUser" class="form-control" placeholder="Your Name*"
-                       required="">
-            </div>
-            <div class="form-group col-lg-6">
-                <input type="hidden" value="@Model.DestinationID" name="DestinationID" class="form-control" placeholder="ID*" required="">
-            </div>
         </div>
 
         <div class="submit text-right">
