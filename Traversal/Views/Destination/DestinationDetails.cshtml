@@ -94,8 +94,8 @@
                             <a href="#blog-share"><span class="fa fa-pinterest-p" aria-hidden="true"></span></a>
                         </div>
                     </div>
-
-
+                     
+                    <!--//Guide Card-->
                     <div class="author-card mt-5">
                         <div class="row align-items-center">
                             <div class="col-sm-3 col-6">
@@ -106,8 +106,7 @@
                             <div class="col-sm-9 mt-sm-0 mt-3">
                                 <h3 class="mb-3 title">@Model.Guide.Name</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, sed et excepturi.
-                                    Distinctio fugit odit? Fugit ipsam. Lorem ipsum dolor sit.
+                                    @Model.Guide.Description1
                                 </p>
                                 <ul class="author-icons mt-4">
                                     <li>
@@ -129,7 +128,6 @@
 
 
            @await Component.InvokeAsync("_CommentList", new {id=ViewBag.Id})
-            <h1>@ViewBag.userId - @Model.DestinationID</h1>
 
             @await Html.PartialAsync("~/Views/Comment/AddComment.cshtml",new {id=Model.DestinationID})
 
