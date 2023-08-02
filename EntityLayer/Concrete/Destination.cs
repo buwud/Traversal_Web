@@ -31,7 +31,9 @@ namespace EntityLayer.Concrete
 		public string? Details1 { get; set; }
 		public int Capacity { get; set; }
 		public bool Status { get; set; }
-		public List<Destination>? Destinations { get; set; }
+		public DateTime? Date { get; set; }
         public List<Reservation>? Reservations { get; set; }
+		public int? GuideID { get; set; }
+		public Guide? Guide { get; set; }
     }
 }

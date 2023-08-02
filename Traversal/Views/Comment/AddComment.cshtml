@@ -1,5 +1,8 @@
 ﻿@model dynamic
 
+
+@if(User.Identity.IsAuthenticated)
+{
 <div class="leave-comment-form mt-5" id="reply">
     <h4 class="side-title mb-2">Leave a Comment</h4>
     <p class="mb-4">
@@ -18,6 +21,12 @@
             <button class="btn btn-style btn-primary">Post Comment </button>
         </div>
     </form>
-</div>
+    </div>
+}
+
+else
+{
+    <h4>You must login to comment.</h4>
+}
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></scriptsrc>

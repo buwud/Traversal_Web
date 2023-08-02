@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _DestinationDal = destinationDal;
         }
 
+        public Destination TGetDestinationWithGuide(int id)
+        {
+            return _DestinationDal.GetDestinationWithGuide(id);
+        }
+
         public List<Destination> GetList()
         {
             return _DestinationDal.GetList();
@@ -41,5 +46,6 @@ namespace BusinessLayer.Concrete
         {
             _DestinationDal.Update(t);
         }
+
     }
 }

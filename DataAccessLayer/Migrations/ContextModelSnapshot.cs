@@ -335,17 +335,20 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("CoverImageS")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("DestinationID1")
-                        .HasColumnType("int");
 
                     b.Property<string>("Details")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Details1")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("GuideID")
+                        .HasColumnType("int");
 
                     b.Property<string>("Image1S")
                         .HasColumnType("nvarchar(max)");
@@ -364,7 +367,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("DestinationID");
 
-                    b.HasIndex("DestinationID1");
+                    b.HasIndex("GuideID");
 
                     b.ToTable("Destinations");
                 });
@@ -651,9 +654,11 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.Destination", b =>
                 {
-                    b.HasOne("EntityLayer.Concrete.Destination", null)
+                    b.HasOne("EntityLayer.Concrete.Guide", "Guide")
                         .WithMany("Destinations")
-                        .HasForeignKey("DestinationID1");
+                        .HasForeignKey("GuideID");
+
+                    b.Navigation("Guide");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Reservation", b =>
@@ -735,9 +740,12 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.Destination", b =>
                 {
-                    b.Navigation("Destinations");
-
                     b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Guide", b =>
+                {
+                    b.Navigation("Destinations");
                 });
 #pragma warning restore 612, 618
         }

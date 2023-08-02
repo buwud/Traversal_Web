@@ -25,18 +25,17 @@
             </h3>
             <div class="blog-post-align">
                 <div class="blog-post-img">
-                    <a href="#"><img src="assets/images/c1.jpg" alt="" class="rounded-circle img-fluid" /></a>
+                    <a href="#"><img src="/MemberImages/@Model.Guide.Image" alt="" class="rounded-circle img-fluid" /></a>
                 </div>
                 <div class="blog-post-info">
                     <div class="author align-items-center mb-1">
-                        <a href="#"></a> in <a href="#url">Traversal</a>
+                        <a href="#"></a> @Model.Guide?.Name in <a href="#url">@Model.Guide.Description</a>
                     </div>
                     <ul class="blog-meta">
                         <li class="meta-item blog-lesson">
-                            <span class="meta-value"> @Model.Reservations </span>
+                            <span class="meta-value"> @Convert.ToDateTime(Model.Date).ToShortDateString() </span>
                         </li>
                         <li class="meta-item blog-students">
-                            <span class="meta-value"> 6min read</span>
                         </li>
                     </ul>
                 </div>
@@ -96,8 +95,37 @@
                         </div>
                     </div>
 
-               
-                    @await Component.InvokeAsync("_DestinationsGuide")
+
+                    <div class="author-card mt-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-3 col-6">
+                                <div>
+                                    <img src="/MemberImages/@Model.Guide.Image" style="object-fit:cover" alt="" class="rounded-circle img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-sm-9 mt-sm-0 mt-3">
+                                <h3 class="mb-3 title">@Model.Guide.Name</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, sed et excepturi.
+                                    Distinctio fugit odit? Fugit ipsam. Lorem ipsum dolor sit.
+                                </p>
+                                <ul class="author-icons mt-4">
+                                    <li>
+                                        <a class="twitter" href="@Model.Guide.TwitterURL">
+                                            <span class="fa fa-twitter"
+                                                  aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="instagram" href="@Model.Guide.InstagramURL">
+                                            <span class="fa fa-instagram"
+                                                  aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
 
            @await Component.InvokeAsync("_CommentList", new {id=ViewBag.Id})
