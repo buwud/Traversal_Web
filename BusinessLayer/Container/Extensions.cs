@@ -1,9 +1,11 @@
 ﻿using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
 using BusinessLayer.Validations.Announcement;
+using BusinessLayer.Validations.ContactUs;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.EntityFramework;
 using DTOLayer.DTOs.AnnouncementDTOs;
+using DTOLayer.DTOs.ContactDTOs;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -40,6 +42,7 @@ namespace BusinessLayer.Container
         public static void CustomValidator(this IServiceCollection services)
         {
             services.AddTransient<IValidator<AnnouncementAddValidatorDTO>, AnnouncementValidator>();
+            services.AddTransient<IValidator<SendMessageDto>, SendMessageValidator>();
         }
     }
 }
