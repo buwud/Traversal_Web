@@ -1,10 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using SignalRAPI.DAL;
+using SignalRAPI.Models;
 using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddScoped<VisitorService>();
+builder.Services.AddSignalR();
 
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<Context>(options =>
 {
