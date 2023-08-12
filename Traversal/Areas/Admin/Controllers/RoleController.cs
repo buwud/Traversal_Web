@@ -1,6 +1,7 @@
 ﻿using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Traversal.Areas.Admin.Models.AppRole;
 
 namespace Traversal.Areas.Admin.Controllers
@@ -10,10 +11,14 @@ namespace Traversal.Areas.Admin.Controllers
     public class RoleController : Controller
     {
         private readonly RoleManager<AppRole> _roleManager;
-        public RoleController(RoleManager<AppRole> roleManager)
+        private readonly UserManager<AppUser> _userManager;
+
+        public RoleController(RoleManager<AppRole> roleManager, UserManager<AppUser> userManager)
         {
             _roleManager = roleManager;
+            _userManager = userManager;
         }
+
         [Route("Index")]
         public IActionResult Index()
         {
@@ -72,6 +77,31 @@ namespace Traversal.Areas.Admin.Controllers
             value.Name = m.Name;
             await _roleManager.UpdateAsync(value);
             return RedirectToAction("Index");
+        }
+
+        [Route("UserList")]
+        public IActionResult UserList()
+        {
+            var values = _userManager.Users.ToList();
+            return View(values);
+        }
+
+        [Route("AssignRole/{id}")]
+        public async Task<IActionResult> AssignRole(int id)
+        {
+            var user = _userManager.Users.FirstOrDefault(x => x.Id == id);
+            var roles = _roleManager.Roles.ToList();
+            var userRoles = await _userManager.GetRolesAsync(user);
+            List<AssignRoleViewModel> assignRoleViewModels= new List<AssignRoleViewModel>();
+            foreach (var role in roles)
+            {
+                AssignRoleViewModel m = new AssignRoleViewModel();
+                m.RoleID = role.Id;
+                m.RoleName = role.Name;
+                m.RoleExist = userRoles.Contains(role.Name);
+                assignRoleViewModels.Add(m);
+            }
+            return View(assignRoleViewModels); 
         }
 
     }
