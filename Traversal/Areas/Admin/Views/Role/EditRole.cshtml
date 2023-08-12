@@ -1,0 +1,15 @@
+﻿@model EditRoleViewModel
+@{
+    ViewData["Title"] = "EditRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h6>Edit Role</h6>
+
+<form method="post">
+    <input type="hidden"  asp-for="RoleID"/>
+    <label>Name</label>
+    <input type="text" class="form-control" asp-for="Name" autofocus />
+    <br />
+    <button class="btn btn-outline-success">Save Changes</button>
+</form>

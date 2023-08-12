@@ -55,6 +55,8 @@ builder.Services.AddMvc(Config =>
 });
 builder.Services.AddMvc();
 
+
+
 //LOGLAMA
 
 
