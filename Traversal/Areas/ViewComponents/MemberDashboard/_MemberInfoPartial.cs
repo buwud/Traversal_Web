@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Traversal.Areas.ViewComponents.Dashboard
 {
-    [AllowAnonymous]
     public class _MemberInfoPartial:ViewComponent
     {
         private readonly UserManager<AppUser> _userManager;

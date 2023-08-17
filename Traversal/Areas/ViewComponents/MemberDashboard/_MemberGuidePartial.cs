@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Traversal.Areas.ViewComponents.Dashboard
 {
-    [AllowAnonymous]
     public class _MemberGuidePartial:ViewComponent
     {
         GuideManager _guideManager = new GuideManager(new EfGuideDal());

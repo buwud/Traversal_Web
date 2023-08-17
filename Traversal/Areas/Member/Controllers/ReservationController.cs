@@ -4,6 +4,7 @@ using BusinessLayer.Validations;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
@@ -15,7 +16,7 @@ using System.Security.Claims;
 namespace Traversal.Areas.Member.Controllers
 {
     [Area("Member")]
-    [Route("Member/Reservation/[action]")]
+    [Route("Member/Reservation")]
     public class ReservationController : Controller
     {
         private readonly IDestinationService _destinationService;
@@ -31,6 +32,7 @@ namespace Traversal.Areas.Member.Controllers
             _reservationService = reservationService;
         }
 
+        [Route("MyReservations")]
         public async Task<IActionResult> MyReservations()
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
@@ -42,6 +44,7 @@ namespace Traversal.Areas.Member.Controllers
 
             return View();
         }
+        [Route("NewReservation")]
         [HttpGet]
         public IActionResult NewReservation()
         {
@@ -58,7 +61,7 @@ namespace Traversal.Areas.Member.Controllers
             ViewBag.values = values;
             return View();
         }
-
+        [Route("NewReservation")]
         [HttpPost]
         public IActionResult NewReservation(Reservation r, int Destination)
         {
